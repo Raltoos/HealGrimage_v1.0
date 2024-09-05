@@ -6,6 +6,7 @@ const Section1 = () => {
     const [parallaxStrength, setParallaxStrength] = useState(100);
     const [isModalOpen, setIsModalOpen] = useState(false);
 
+
     useEffect(() => {
         const updateParallaxStrength = () => {
             if (window.innerWidth <= 640) { // sm breakpoint
@@ -85,7 +86,7 @@ const Section1 = () => {
 
             {/* Modal and Overlay */}
             {isModalOpen && (
-                <div className="fixed inset-0 z-[150]">
+                <div className="fixed inset-0 z-50">
                     {/* Overlay to block background scroll */}
                     <div
                         className="absolute inset-0 bg-black bg-opacity-90"
