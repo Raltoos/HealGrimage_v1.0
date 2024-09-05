@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Parallax } from 'react-parallax';
-import ImageGallery from '../ImageGallery';
 import { useEffect } from 'react';
 import contact from "../../../assets/contact.svg"
 const Intro = () => {

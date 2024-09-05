@@ -11,6 +11,7 @@ import Main from './components/layout/Main.jsx';
 import hotelStore from './store/store.js';
 import SmoothScrolling from './components/scroll/SmoothScrolling.jsx';
 import AYUSH from './components/pages/ayushPage/AYUSH.jsx';
+import Services from './components/pages/servicesPage/Services.jsx';
 
 const router = createBrowserRouter([
   
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
       {
         path: "/ayush",
         element: <AYUSH />
+      },
+      {
+        path: "/services",
+        element: <Services />
       },
     ]
   },
