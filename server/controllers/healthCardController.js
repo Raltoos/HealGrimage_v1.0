@@ -24,7 +24,7 @@ const createHealthCard = async (req, res) => {
       past_medical_records,
       vaccines,
       tests_needed,
-      emergency_contact, // Add emergency_contact to the HealthCard object
+      emergency_contact, // Add emergency_conxtact to the HealthCard object
     });
 
     // Save to the database

@@ -20,6 +20,7 @@ app.use(session);
 
 // Routes
 app.use("/user", require("./routes/userRoutes"));
+app.use("/api", require("./routes/hostpitalRoutes"));
 
 // Error handling middleware
 app.use(errorHandler);
