@@ -16,6 +16,7 @@ import Register from './components/UserAuth/Register/RegisterPage.jsx'
 import Login from './components/UserAuth/Login/LoginPage.jsx'
 import HealthMain from './components/pages/healthCard/HealthMain.jsx'
 import AyushServices from './components/pages/ayushPage/AyushServicePage/AyushServices.jsx'
+import EmailOTPVerify from './components/UserAuth/EmailOTPVerification/EmailOTPVerify.jsx'
 
 const router = createBrowserRouter([
   {
@@ -26,7 +27,10 @@ const router = createBrowserRouter([
     path: '/register',
     element: <Register />
   },
- 
+  {
+    path: "/verify/email/otp",
+    element: <EmailOTPVerify/>
+  },
   {
     path: '/',
     element: <App />,

@@ -3,7 +3,7 @@ const dotenv = require("dotenv").config();
 const logger = require("morgan");
 const connectDb = require("./config/dbConnection");
 const errorHandler = require("./middleware/errorHandler");
-const initializeCronJobs = require("./jobs/cronJob");
+
 const cors = require("cors");
 const session = require("./config/sessionConfig");
 
@@ -25,7 +25,6 @@ app.use("/user", require("./routes/userRoutes"));
 app.use(errorHandler);
 
 // Initialize cron jobs
-initializeCronJobs();
 
 const port = process.env.PORT || 3001;
 

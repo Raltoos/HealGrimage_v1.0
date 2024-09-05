@@ -10,7 +10,7 @@ import FailureAlert from "../Shared/FailureAlert";
 import SuccessAlert from "../Shared/SuccessAlert";
 
 export default function LoginForm() {
-  const { loginStatus } = useSelector((state) => state.users);
+  const { loginStatus, user } = useSelector((state) => state.users);
   const dispatch = useDispatch();
 
   const emailRef = useRef("");
@@ -27,7 +27,13 @@ export default function LoginForm() {
     setAlert("");
 
     try {
-      await dispatch(loginUser({ email, password })).unwrap();
+      const response = await dispatch(loginUser({ email, password })).unwrap();
+      const { userId, token } = response; // Adjust according to your API response
+
+      // Store userId and token in localStorage
+      localStorage.setItem('userId', userId);
+      localStorage.setItem('token', token);
+
       setAlert({ type: "success" });
       emailRef.current.value = "";
       passRef.current.value = "";
@@ -35,14 +41,14 @@ export default function LoginForm() {
       console.error("Error:", error);
       setAlert({
         type: "failure",
-        message: error || "Please check your information and try again.",
+        message: error.message || "Please check your information and try again.",
       });
     }
   };
 
   useEffect(() => {
-    if (loginStatus == "succeeded") {
-      navigate("/home");
+    if (loginStatus === "succeeded") {
+      navigate("/main");
     }
   }, [loginStatus, navigate]);
 
@@ -50,9 +56,7 @@ export default function LoginForm() {
     <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
       <form className="space-y-6" onSubmit={handleOnSubmit}>
         <AuthInput label={"Email"} type={"email"} inputRef={emailRef} />
-
         <AuthPassInput label={"Password"} forgotPass={true} passRef={passRef} />
-
         <AuthButton text={"Sign In"} />
       </form>
 
@@ -64,12 +68,12 @@ export default function LoginForm() {
       <div className="mt-10">
         {alert.type === "success" ? (
           <SuccessAlert
-            label1={"Registration successful"}
-            label2={"Please check your email to verify"}
+            label1={"Login successful"}
+            label2={"Redirecting to the main page"}
           />
         ) : alert.type === "failure" ? (
           <FailureAlert
-            label1={"Registration Failed!"}
+            label1={"Login Failed!"}
             label2={alert.message}
           />
         ) : null}
