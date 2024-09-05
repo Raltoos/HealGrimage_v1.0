@@ -11,6 +11,7 @@ import Main from './components/layout/Main.jsx';
 import hotelStore from './store/store.js';
 import SmoothScrolling from './components/scroll/SmoothScrolling.jsx';
 import PageReveal from './components/pageReveal/pageReveal.jsx';
+import AYUSH from './components/pages/ayushPage/AYUSH.jsx';
 
 const router = createBrowserRouter([
   {
@@ -26,7 +27,11 @@ const router = createBrowserRouter([
         element: <Main />
       },
     ]
-  }
+  },
+  {
+    path: "/ayush",
+    element: <AYUSH />
+  },
 ]);
 
 

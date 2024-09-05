@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import HoverDropDown from "./HeaderComponents/HoverDropDown";
 import { MdOutlineArrowDropDown } from "react-icons/md";
 import { sidebarActions } from "../../store/slices/siderbarSlice";
-import { cities } from "../../assets/cities";
+import { NavLink } from "react-router-dom";
 
 const Header = () => {
   const dispatch = useDispatch();
@@ -90,6 +90,7 @@ const Header = () => {
               </a>
             </li>
             <li className="nav-a">
+              <NavLink to="../ayush">
               <a className="flex-custom-center text-black relative overflow-hidden group font-karla">
                 <span className="text-[1.3rem] nav-span inline-block transition-all duration-300 ease-in-out transform group-hover:-translate-y-full group-hover:opacity-0 text-black">
                   AYUSH
@@ -98,6 +99,8 @@ const Header = () => {
                   AYUSH
                 </span>
               </a>
+              </NavLink>
+              
             </li>
             <li
               className="nav-a"
