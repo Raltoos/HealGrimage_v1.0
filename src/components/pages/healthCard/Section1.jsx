@@ -272,8 +272,14 @@ const Section1 = () => {
 
             {/* Modal for form submission */}
             {isModalOpen && (
-                <div className="fixed inset-0 z-50">
-                    <div className="absolute inset-0 bg-black bg-opacity-90" onClick={handleModalToggle}></div>
+                <div className="fixed inset-0 z-[150]">
+                    {/* Overlay to block background scroll */}
+                    <div
+                        className="absolute inset-0 bg-black bg-opacity-90"
+                        onClick={handleModalToggle} // Close modal on overlay click
+                    ></div>
+
+                    {/* Modal */}
                     <div className="absolute inset-0 flex items-center justify-center p-4">
                         <div className="bg-white p-8 rounded-md w-[90%] md:w-[80%] lg:w-[60%] max-h-[90vh] overflow-y-auto">
                             <h3 className="text-xl font-semibold mb-4">Create Your Health Card</h3>
