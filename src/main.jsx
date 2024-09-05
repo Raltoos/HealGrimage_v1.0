@@ -13,6 +13,7 @@ import hotelStore from './store/store.js';
 import SmoothScrolling from './components/scroll/SmoothScrolling.jsx';
 import AYUSH from './components/pages/ayushPage/AYUSH.jsx';
 import HealthMain from './components/pages/healthCard/HealthMain.jsx';
+import AyushServices from './components/pages/ayushPage/AyushServicePage/AyushServices.jsx';
 
 const router = createBrowserRouter([
   
@@ -26,7 +27,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/ayush",
-        element: <AYUSH />
+        element: <AYUSH />,
+      },
+      {
+        path: "/ayush/services",
+        element: <AyushServices />,
       },
       {
         path: "/healthcard",

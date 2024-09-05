@@ -1,8 +1,7 @@
 import { useState } from "react";
 import { Parallax } from "react-parallax";
 import { useEffect } from "react";
-import { NavLink } from "react-router-dom";
-import contact from "../../../assets/contact.svg";
+import contact from "../../../../assets/contact.svg";
 const Intro = () => {
   const [parallaxStrength, setParallaxStrength] = useState(100);
 
@@ -34,35 +33,25 @@ const Intro = () => {
           <div className="flex flex-col md:flex-row relative w-[80%] items-center gap-[3rem] h-full">
             <div className="flex md:justify-center w-full relative h-full">
               <div className="flex-custom-col items-center md:items-start justify-center gap-4 py-4">
-                {/* <div className='text-left w-full'>
-                                    <span className="span-margin eyebrow text-hero-span text-[1.15rem] text-[var(--color-white)] font-karla text-shadow">• ABOUT US
-                                    </span>
-                                </div> */}
                 <div className="col-row col-row-title medium text-shadow mb-2">
-                  <h2 className="text-black">Explore Holisitc Plans</h2>
+                  <h2 className="text-black">For further assitance</h2>
                 </div>
                 <div className="max-w-[90%] text-[1.5rem] space-y-6 py-2">
                   <div className="md:text-left text-center w-full space-y-2">
-                    <p className="font-cormo font-medium text-black">
-                      Explore holistic healing with our AYUSH Package Generator.
-                      This dedicated section guides you to personalized Ayurveda
-                      packages tailored to your preferences. Simply filter by
-                      treatment type, city, and budget to discover the ideal
-                      Ayurveda experience that aligns with your wellness goals.
-                      Let us help you find the perfect balance of tradition and
-                      comfort for your healing journey.
-                    </p>
+                    <span className="text-black">
+                      Need more personalized options? Our Further Assistance
+                      section offers automated guidance to help you craft the
+                      perfect treatment package. By analyzing your unique needs
+                      and preferences, we provide tailored recommendations,
+                      ensuring you receive the most suitable medical solutions.
+                    </span>
                   </div>
                 </div>
                 <div
                   className={`btn w-[90%] md:w-auto btn-svg h-[3rem] border-[1px] border-white bg-transparent rounded-none `}
                 >
                   <div className="btn-content gap-3">
-                    <NavLink to="/ayush/services">
-                      <button className="bg-[#052560] text-white p-2 rounded-md">
-                        Get Plans
-                      </button>
-                    </NavLink>
+                    <button className="bg-[#052560] p-2 text-white rounded-md">Create Plans</button>
                   </div>
                 </div>
               </div>
