@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import { Provider } from 'react-redux'
 import Main from './components/layout/Main.jsx';
+import Services from "./components/pages/servicesPage/Services.jsx"
 import hotelStore from './store/store.js';
 import SmoothScrolling from './components/scroll/SmoothScrolling.jsx';
 import AYUSH from './components/pages/ayushPage/AYUSH.jsx';
@@ -35,6 +36,14 @@ const router = createBrowserRouter([
       {
         path: "/ayush",
         element: <AYUSH />
+      },
+      {
+        path: "/healthcard",
+        element: <HealthMain />
+      },
+      {
+        path: "/services",
+        element: <Services />
       },
     ]
   },
