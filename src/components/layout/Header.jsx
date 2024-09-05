@@ -9,10 +9,10 @@ const Header = () => {
   const dispatch = useDispatch();
   const [activeItem, setActiveItem] = useState("Stay");
 
-  const [dropDown, setDropDown] = useState({
-    visibility: false,
-    childVisibility: false
-  });
+  // const [dropDown, setDropDown] = useState({
+  //   visibility: false,
+  //   childVisibility: false
+  // });
 
   const handleOpen = () => {
     dispatch(sidebarActions.toggleOpen());
@@ -111,12 +111,12 @@ const Header = () => {
               <a className="flex-custom-center text-black relative overflow-hidden group font-karla">
                 <span className="text-[1.3rem] nav-span inline-block transition-all duration-300 ease-in-out transform group-hover:-translate-y-full group-hover:opacity-0 text-black">
                   <div className="flex gap-1">
-                    Services <MdOutlineArrowDropDown color="black" />
+                    Services
                   </div>
                 </span>
                 <span className="text-[1.3rem] nav-span absolute top-full left-0 w-full transition-all duration-300 ease-in-out transform group-hover:-translate-y-full text-black">
                   <div className="flex gap-1">
-                    Services <MdOutlineArrowDropDown color="black" />
+                    Services
                   </div>
                 </span>
               </a>
@@ -160,7 +160,7 @@ const Header = () => {
       <div
         className={`${scrollState.isDarkMode ? "bg-[var(--color-border)] border-bottom" : "border-bottom"}`}
       ></div>
-      {dropDown.visibility &&
+      {/* {dropDown.visibility &&
           <HoverDropDown
             onMouseEnter={() =>
               setDropDown({ visibility: true, identifier: "city" })
@@ -180,7 +180,7 @@ const Header = () => {
               ))}
             </div>
           </HoverDropDown>
-        }
+        } */}
     </header>
   );
 };

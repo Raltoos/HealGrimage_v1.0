@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Parallax } from "react-parallax";
-import ImageGallery from "./ImageGallery";
+import svg from "./../../assets/svg.jpg"
 import { useEffect } from "react";
 
 const AboutUs = () => {
@@ -34,7 +34,7 @@ const AboutUs = () => {
           <div className="flex flex-col md:flex-row relative w-[75%] items-center gap-[6rem] h-full text-white">
             <div className="h-full flex items-center justify-center mt-10">
               <Parallax
-                bgImage="/jewellery/models/noFace.png"
+                bgImage={svg}
                 strength={parallaxStrength}
               >
                 <div className="md:h-[40rem] h-[25rem] md:w-[33rem] w-[100vw] bg-cover" />
