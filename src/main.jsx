@@ -23,7 +23,7 @@ import AboutUsMain from './components/pages/aboutUs/AboutUsMain.jsx';
 const router = createBrowserRouter([
   {
     path: '/login',
-    element: <Login/>
+    element: <Login />
   },
   {
     path: '/register',
@@ -31,12 +31,17 @@ const router = createBrowserRouter([
   },
   {
     path: "/verify/email/otp",
-    element: <EmailOTPVerify/>
+    element: <EmailOTPVerify />
   },
   {
     path: '/',
     element: <App />,
     children: [
+
+      {
+        index: true,
+        element: <Main />
+      },
       {
         path: "/main",
         element: <Main />
