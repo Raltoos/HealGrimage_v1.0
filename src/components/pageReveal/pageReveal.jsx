@@ -53,7 +53,7 @@ const PageReveal = () => {
           <div className="absolute inset-0 w-full h-full overflow-hidden">
             <img
               ref={imageRef}
-              src="https://cdn.alromaizan.com/image/upload/v1682709593/media/blog/unlocking-the-secrets-to-layering-your-gold-jewellery-like-a-pro.jpg"
+              src=""
               alt="Jewelry"
               className="w-full h-full object-cover filter"
             />
@@ -63,7 +63,7 @@ const PageReveal = () => {
             className="relative z-10 flex flex-col items-start justify-start h-full font-rollgates text-4xl md:text-6xl font-bold tracking-widest text-shadow-lg bg-gradient-to-r from-white via-gray-200 to-gray-200 mt-[4rem] ml-[4rem] bg-clip-text text-transparent"
           >
             <br className="hidden md:block" />
-            <span className="drop-shadow-[2px_2px_4px_rgba(255,255,255,0.3)]">KAAAY JEWELLERS</span>
+            <span className="drop-shadow-[2px_2px_4px_rgba(255,255,255,0.3)]"></span>
           </h1>
 
         </div>

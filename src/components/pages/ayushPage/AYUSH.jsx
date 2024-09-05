@@ -8,7 +8,7 @@ import ImageGallery from './ImageGallery'
 
 const AYUSH = () => {
   return (
-    <div className='w-full h-full'>
+    <div className='w-full h-full bg-white'>
       <AboutUs />
       <ImageSlider />
       <ImageGallery/>
