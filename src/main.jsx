@@ -18,6 +18,8 @@ import HealthMain from './components/pages/healthCard/HealthMain.jsx'
 import AyushServices from './components/pages/ayushPage/AyushServicePage/AyushServices.jsx'
 import AboutUs from './components/pages/aboutUs/AboutUs.jsx';
 import AboutUsMain from './components/pages/aboutUs/AboutUsMain.jsx';
+import Cities from './components/pages/cities/Cities.jsx';
+import Banglore from './components/pages/cities/Banglore.jsx';
 
 const router = createBrowserRouter([
   {
@@ -57,6 +59,14 @@ const router = createBrowserRouter([
         path: "/aboutus",
         element: <AboutUsMain />
       },
+      {
+        path: "/cities",
+        element: <Cities />
+      },
+      {
+        path: "/banglore",
+        element: <Banglore />
+      }
     ]
   },
 ]);
