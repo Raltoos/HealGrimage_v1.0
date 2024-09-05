@@ -12,14 +12,22 @@ import Services from "./components/pages/servicesPage/Services.jsx"
 import hotelStore from './store/store.js';
 import SmoothScrolling from './components/scroll/SmoothScrolling.jsx';
 import AYUSH from './components/pages/ayushPage/AYUSH.jsx';
-import HealthMain from './components/pages/healthCard/HealthMain.jsx';
-import AyushServices from './components/pages/ayushPage/AyushServicePage/AyushServices.jsx';
-
+import Register from './components/UserAuth/Register/RegisterPage.jsx'
+import Login from './components/UserAuth/Login/LoginPage.jsx'
+import HealthMain from './components/pages/healthCard/HealthMain.jsx'
 const router = createBrowserRouter([
-  
   {
-    path:'/',
-    element:<App/>,
+    path: '/login',
+    element: <Login/>
+  },
+  {
+    path: '/register',
+    element: <Register />
+  },
+ 
+  {
+    path: '/',
+    element: <App />,
     children: [
       {
         path: "/main",
@@ -49,9 +57,9 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <SmoothScrolling>
-    <Provider store={hotelStore}>
-      <RouterProvider router={router} />
-    </Provider>
+      <Provider store={hotelStore}>
+        <RouterProvider router={router} />
+      </Provider>
     </SmoothScrolling>
   </React.StrictMode>,
 )

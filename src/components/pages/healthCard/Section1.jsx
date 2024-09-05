@@ -4,7 +4,7 @@ import card from "./images/card.svg";
 
 const Section1 = () => {
     const [parallaxStrength, setParallaxStrength] = useState(100);
-    const [isModalOpen, setIsModalOpen] = useState(false); // State to manage modal visibility
+    const [isModalOpen, setIsModalOpen] = useState(false);
 
     useEffect(() => {
         const updateParallaxStrength = () => {
@@ -21,8 +21,16 @@ const Section1 = () => {
         return () => window.removeEventListener('resize', updateParallaxStrength); // Cleanup
     }, []);
 
-    // Function to toggle modal visibility
-    const toggleModal = () => {
+    // Lock body scroll when modal is open, enable it when closed
+    useEffect(() => {
+        if (isModalOpen) {
+            document.body.style.overflow = 'hidden'; // Disable body scroll
+        } else {
+            document.body.style.overflow = 'auto'; // Re-enable body scroll
+        }
+    }, [isModalOpen]);
+
+    const handleModalToggle = () => {
         setIsModalOpen(!isModalOpen);
     };
 
@@ -57,16 +65,16 @@ const Section1 = () => {
                                             <br />
                                             Phone Numbers: +91-11-24651950, +91-11-24651937
                                             <br />
-                                            Email: webmanager-ayush@gov.in, jsminister-ayush@gov.in
+                                            Email: For General Queries: webmanager-ayush@gov.in
                                         </p>
                                     </div>
                                 </div>
                                 <div
                                     className={`btn w-[90%] btn-svg h-[3rem] border-[1px] border-black bg-transparent rounded-none hover:text-white hover:bg-black`}
-                                    onClick={toggleModal} // Open modal on click
+                                    onClick={handleModalToggle}
                                 >
                                     <div className='btn-content gap-3'>
-                                        <span>Create your own health card</span>
+                                        <span className=''>Create your own health card</span>
                                     </div>
                                 </div>
                             </div>
@@ -75,79 +83,66 @@ const Section1 = () => {
                 </div>
             </section>
 
-            {/* Modal Component */}
+            {/* Modal and Overlay */}
             {isModalOpen && (
-                <div className="fixed inset-0 flex items-center justify-center z-50">
-                    <div className="absolute inset-0 bg-black opacity-70"></div>
-                    <div className="bg-white w-[90%] md:w-[40%] p-6 rounded-lg z-10 shadow-xl">
-                        <h2 className="text-2xl font-bold mb-6 text-center text-gray-800">Create Your Health Card</h2>
-                        <form className="space-y-4">
-                            <div className="mb-4">
-                                <label className="block text-gray-700 font-semibold">Full Name:</label>
-                                <input
-                                    type="text"
-                                    className="w-full border border-gray-300 p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                                    placeholder="Enter your full name"
-                                />
-                            </div>
-                            <div className="mb-4">
-                                <label className="block text-gray-700 font-semibold">Email:</label>
-                                <input
-                                    type="email"
-                                    className="w-full border border-gray-300 p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                                    placeholder="Enter your email"
-                                />
-                            </div>
-                            <div className="mb-4">
-                                <label className="block text-gray-700 font-semibold">Phone Number:</label>
-                                <input
-                                    type="tel"
-                                    className="w-full border border-gray-300 p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                                    placeholder="Enter your phone number"
-                                />
-                            </div>
-                            <div className="mb-4">
-                                <label className="block text-gray-700 font-semibold">Date of Birth:</label>
-                                <input
-                                    type="date"
-                                    className="w-full border border-gray-300 p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                                />
-                            </div>
-                            <div className="mb-4">
-                                <label className="block text-gray-700 font-semibold">Gender:</label>
-                                <select
-                                    className="w-full border border-gray-300 p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                                >
-                                    <option value="">Select Gender</option>
-                                    <option value="male">Male</option>
-                                    <option value="female">Female</option>
-                                    <option value="other">Other</option>
-                                </select>
-                            </div>
-                            <div className="mb-4">
-                                <label className="block text-gray-700 font-semibold">Address:</label>
-                                <textarea
-                                    className="w-full border border-gray-300 p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                                    placeholder="Enter your address"
-                                ></textarea>
-                            </div>
+                <div className="fixed inset-0 z-50">
+                    {/* Overlay to block background scroll */}
+                    <div
+                        className="absolute inset-0 bg-black bg-opacity-90"
+                        onClick={handleModalToggle} // Close modal on overlay click
+                    ></div>
 
-                            <div className="flex justify-between space-x-3">
-                                <button
-                                    type="button"
-                                    className="px-4 py-2 bg-gray-300 rounded-md hover:bg-gray-400"
-                                    onClick={toggleModal} // Close modal
-                                >
-                                    Cancel
-                                </button>
-                                <button
-                                    type="submit"
-                                    className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600"
-                                >
-                                    Submit
-                                </button>
-                            </div>
-                        </form>
+                    {/* Modal */}
+                    <div className="absolute inset-0 flex items-center justify-center p-4">
+                        <div className="bg-white p-8 rounded-md w-[90%] md:w-[80%] lg:w-[60%] max-h-[90vh] overflow-y-auto relative">
+                            <h3 className="text-xl font-semibold mb-4">Create Your Health Card</h3>
+                            <form className="space-y-4">
+                                <label className="block text-gray-700 font-semibold">Past medical records</label>
+                                <input type="text" className="w-full p-2 border rounded-md" />
+
+                                <label className="block text-gray-700 font-semibold">Diagnosis date</label>
+                                <input type="date" className="w-full p-2 border rounded-md" />
+
+                                <label className="block text-gray-700 font-semibold">Treatment for it</label>
+                                <input type="text" className="w-full p-2 border rounded-md" />
+
+                                <label className="block text-gray-700 font-semibold">Vaccines name</label>
+                                <input type="text" className="w-full p-2 border rounded-md" />
+
+                                <label className="block text-gray-700 font-semibold">Vaccine date</label>
+                                <input type="date" className="w-full p-2 border rounded-md" />
+
+                                <label className="block text-gray-700 font-semibold">Test needed header</label>
+                                <input type="text" className="w-full p-2 border rounded-md" />
+
+                                <label className="block text-gray-700 font-semibold">Test name</label>
+                                <input type="text" className="w-full p-2 border rounded-md" />
+
+                                <label className="block text-gray-700 font-semibold">Test reason</label>
+                                <input type="text" className="w-full p-2 border rounded-md" />
+
+                                <label className="block text-gray-700 font-semibold">Due date</label>
+                                <input type="date" className="w-full p-2 border rounded-md" />
+
+                                <label className="block text-gray-700 font-semibold">Emergency contact header</label>
+                                <input type="text" className="w-full p-2 border rounded-md" />
+
+                                <label className="block text-gray-700 font-semibold">Contact</label>
+                                <input type="text" className="w-full p-2 border rounded-md" />
+
+                                <label className="block text-gray-700 font-semibold">Relationship</label>
+                                <input type="text" className="w-full p-2 border rounded-md" />
+
+                                <div className="flex justify-end mt-4">
+                                    <button type="button" className="bg-red-500 text-white px-4 py-2 rounded-md mr-2" onClick={handleModalToggle}>
+                                        Close
+                                    </button>
+                                    <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded-md">
+                                        Submit
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
             )}
