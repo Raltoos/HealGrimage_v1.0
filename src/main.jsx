@@ -15,6 +15,8 @@ import AYUSH from './components/pages/ayushPage/AYUSH.jsx';
 import Register from './components/UserAuth/Register/RegisterPage.jsx'
 import Login from './components/UserAuth/Login/LoginPage.jsx'
 import HealthMain from './components/pages/healthCard/HealthMain.jsx'
+import AyushServices from './components/pages/ayushPage/AyushServicePage/AyushServices.jsx'
+
 const router = createBrowserRouter([
   {
     path: '/login',
