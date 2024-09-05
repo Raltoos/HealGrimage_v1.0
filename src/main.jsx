@@ -14,7 +14,7 @@ import SmoothScrolling from './components/scroll/SmoothScrolling.jsx';
 import AYUSH from './components/pages/ayushPage/AYUSH.jsx';
 import Register from './components/UserAuth/Register/RegisterPage.jsx'
 import Login from './components/UserAuth/Login/LoginPage.jsx'
-
+import HealthMain from './components/pages/healthCard/HealthMain.jsx'
 const router = createBrowserRouter([
   {
     path: '/login',
