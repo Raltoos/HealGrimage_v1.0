@@ -14,23 +14,20 @@ import PageReveal from './components/pageReveal/pageReveal.jsx';
 import AYUSH from './components/pages/ayushPage/AYUSH.jsx';
 
 const router = createBrowserRouter([
+  
   {
-    path: "/",
-    element: <PageReveal />,
-  },
-  {
-    path:'/main',
+    path:'/',
     element:<App/>,
     children: [
       {
         path: "/main",
         element: <Main />
       },
+      {
+        path: "/ayush",
+        element: <AYUSH />
+      },
     ]
-  },
-  {
-    path: "/ayush",
-    element: <AYUSH />
   },
 ]);
 

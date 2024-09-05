@@ -70,6 +70,7 @@ const Header = () => {
           {/* will be mapped from data */}
           <ul className={`lg:flex logo hidden text-black`}>
             <li className="nav-a">
+              <NavLink to="/main">
               <a className="flex-custom-center text-black relative overflow-hidden group font-karla">
                 <span className="text-[1.3rem] nav-span inline-block transition-all duration-300 ease-in-out transform group-hover:-translate-y-full group-hover:opacity-0 text-black">
                   Home
@@ -78,6 +79,7 @@ const Header = () => {
                   Home
                 </span>
               </a>
+              </NavLink>
             </li>
             <li className="nav-a">
               <a className="flex-custom-center text-black relative overflow-hidden group font-karla">
@@ -90,7 +92,7 @@ const Header = () => {
               </a>
             </li>
             <li className="nav-a">
-              <NavLink to="../ayush">
+              <NavLink to="/ayush">
               <a className="flex-custom-center text-black relative overflow-hidden group font-karla">
                 <span className="text-[1.3rem] nav-span inline-block transition-all duration-300 ease-in-out transform group-hover:-translate-y-full group-hover:opacity-0 text-black">
                   AYUSH

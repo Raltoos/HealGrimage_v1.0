@@ -24,15 +24,10 @@ const AboutUs = () => {
 
   return (
     <>
-      <section id="about-us" className="section-padding relative bg-[#052560]">
-        {/* <div className='border-top-ornament'>
-                    <div className="ornament">
-                        <img src="/images/symbols/KitchenSymbol.svg" alt="Kitchen Symbol" />
-                    </div>
-                </div> */}
-        <div className="w-full h-[45rem] bg-custom bg-[#052560] flex justify-center">
-          <div className="flex flex-col md:flex-row relative w-[75%] items-center gap-[6rem] h-full text-white">
-            <div className="h-full flex items-center justify-center mt-10">
+      <section id="about-us" className="mt-[var(--section-padding)] relative bg-[#052560]">
+        <div className="w-full bg-custom bg-[#052560] flex justify-center">
+          <div className="flex flex-col md:flex-row relative w-[75%] items-center gap-[6rem] h-full text-white pb-8">
+            <div className="h-full flex items-center justify-center">
               <Parallax
                 bgImage={svg}
                 strength={parallaxStrength}
@@ -42,10 +37,6 @@ const AboutUs = () => {
             </div>
             <div className="flex md:justify-center w-full relative h-full text-white">
               <div className="flex-custom-col items-center md:items-start justify-center gap-4 py-4">
-                {/* <div className='text-left w-full'>
-                                    <span className="span-margin eyebrow text-hero-span text-[1.15rem] text-[var(--color-white)] font-karla text-shadow">• ABOUT US
-                                    </span>
-                                </div> */}
                 <div className="col-row col-row-title medium text-shadow py-10 w-full">
                   <h2 className="text-white text-left">Our Story</h2>
                 </div>
@@ -59,10 +50,7 @@ const AboutUs = () => {
                       integration and comprehensive support. Our app connects
                       you with India’s top-tier healthcare, offering virtual
                       facility tours, a secure digital health passport, and
-                      all-inclusive travel packages. With strong government
-                      backing and operational efficiency, HealthGrimage ensures
-                      a smooth, cost-effective, and well-supported medical
-                      journey from start to finish.
+                      all-inclusive travel packages.
                     </p>
                   </div>
                   <div className="md:text-left text-center w-full space-y-2 mb-[2.5rem]">
@@ -76,9 +64,6 @@ const AboutUs = () => {
                       integrates seamlessly with existing systems and benefits
                       from the 'Heal in India' initiative, ensuring
                       comprehensive support throughout your journey.
-                      HealthGrimage combines these advantages, making it
-                      essential for navigating affordable, high-quality
-                      healthcare in India with ease
                     </p>
                   </div>
                   <div className="md:text-left text-center w-full space-y-2 mb-[2.5rem]">
@@ -86,23 +71,13 @@ const AboutUs = () => {
                       How Do We Do It
                     </span>
                     <p className="font-cormo font-light text-lg text-white text-justify">
-                      Our app offers immersive VR previews of facilities,
-                      enabling informed decisions and reducing uncertainty. With
-                      a secure digital health passport we ensure seamless,
-                      centralized data management. Our comprehensive packages
-                      blend medical treatments with travel, including detailed
-                      city info, accommodations, and dining options. The AYUSH
-                      Dashboard provides holistic wellness insights.
+                      Our app offers VR facility previews, secure health data management, 
+                      and all-inclusive medical travel packages with city, accommodation, 
+                      and dining details. The AYUSH Dashboard adds holistic wellness insights 
+                      for a seamless, informed experience.
                     </p>
                   </div>
                 </div>
-                {/* <div className={`btn w-[90%] md:w-auto btn-svg h-[3rem] border-[1px] border-black bg-transparent rounded-none `}>
-                                    <div className='btn-content gap-3'>
-                                        <img className='size-4 first-img' src="/images/symbols/section-symbol.svg" alt="Ornament" />
-                                        <span className='text-[var(--color-dark)]'>Read more</span>
-                                        <img className='size-4 second-img' src="/images/symbols/section-symbol.svg" alt="Ornament" />
-                                    </div>
-                                </div> */}
               </div>
             </div>
           </div>
