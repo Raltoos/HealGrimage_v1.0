@@ -16,6 +16,8 @@ import Register from './components/UserAuth/Register/RegisterPage.jsx'
 import Login from './components/UserAuth/Login/LoginPage.jsx'
 import HealthMain from './components/pages/healthCard/HealthMain.jsx'
 import AyushServices from './components/pages/ayushPage/AyushServicePage/AyushServices.jsx'
+import AboutUs from './components/pages/aboutUs/AboutUs.jsx';
+import AboutUsMain from './components/pages/aboutUs/AboutUsMain.jsx';
 
 const router = createBrowserRouter([
   {
@@ -50,6 +52,10 @@ const router = createBrowserRouter([
       {
         path: "/services",
         element: <Services />
+      },
+      {
+        path: "/aboutus",
+        element: <AboutUsMain />
       },
     ]
   },

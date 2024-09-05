@@ -23,7 +23,7 @@ const AboutUs = () => {
 
   return (
     <>
-      <section id="about-us" className="w-full h-full">
+      <section id="about-us" className="w-full h-full pt-[var(--section-padding)]">
         <div className="w-full h-full bg-[#003B6C] flex-custom-center">
           <div className="flex flex-col md:flex-row relative w-[80%] items-center gap-[3rem] h-full mt-5">
             <div className="flex md:justify-center w-full relative h-full">

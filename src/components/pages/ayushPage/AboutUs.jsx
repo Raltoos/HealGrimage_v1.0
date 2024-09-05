@@ -24,7 +24,7 @@ const AboutUs = () => {
 
   return (
     <>
-      <section id="about-us" className=" relative">
+      <section id="about-us" className="pt-[var(--section-padding)] relative">
         <div className="border-top-ornament">
           <div className="ornament">
             <img src="" alt="" />
