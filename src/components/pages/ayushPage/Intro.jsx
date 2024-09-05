@@ -5,22 +5,22 @@ import { useEffect } from 'react';
 import contact from "../../../assets/contact.svg"
 const Intro = () => {
     const [parallaxStrength, setParallaxStrength] = useState(100);
-  
+
     useEffect(() => {
-      const updateParallaxStrength = () => {
-        if (window.innerWidth <= 640) { // sm breakpoint
-          setParallaxStrength(0);
-        } else {
-          setParallaxStrength(100);
-        }
-      };
-  
-      updateParallaxStrength(); // Set the initial value
-      window.addEventListener('resize', updateParallaxStrength); // Update on window resize
-  
-      return () => window.removeEventListener('resize', updateParallaxStrength); // Cleanup
+        const updateParallaxStrength = () => {
+            if (window.innerWidth <= 640) { // sm breakpoint
+                setParallaxStrength(0);
+            } else {
+                setParallaxStrength(100);
+            }
+        };
+
+        updateParallaxStrength(); // Set the initial value
+        window.addEventListener('resize', updateParallaxStrength); // Update on window resize
+
+        return () => window.removeEventListener('resize', updateParallaxStrength); // Cleanup
     }, []);
-  
+
     return (
         <>
             <section id='about-us' className='section-padding relative'>
@@ -31,7 +31,7 @@ const Intro = () => {
                 </div>
                 <div className="w-full bg-[#F8F9FC] flex-custom-center">
                     <div className='flex flex-col md:flex-row relative w-[80%] items-center gap-[3rem] h-full'>
-                       
+
                         <div className='flex md:justify-center w-full relative h-full'>
                             <div className='flex-custom-col items-center md:items-start justify-center gap-4 py-4'>
                                 {/* <div className='text-left w-full'>
@@ -47,17 +47,17 @@ const Intro = () => {
                                             • ABOUT US
                                         </span> */}
                                         <p className='font-cormo font-medium text-black'>
-                                        Address:
-AYUSH Bhawan, B-Block, GPO Complex,
-INA, New Delhi - 110023, India
-
-Phone Numbers:
-+91-11-24651950
-+91-11-24651937
-
-Email:
-For General Queries: webmanager-ayush@gov.in
-For Grievances: jsminister-ayush@gov.in
+                                            Address:
+                                            AYUSH Bhawan, B-Block, GPO Complex,
+                                            INA, New Delhi - 110023, India
+<br />
+                                            Phone Numbers:
+                                            +91-11-24651950
+                                            +91-11-24651937
+<br />
+                                            Email:
+                                            For General Queries: webmanager-ayush@gov.in
+                                            For Grievances: jsminister-ayush@gov.in
 
                                         </p>
                                     </div>
@@ -66,9 +66,9 @@ For Grievances: jsminister-ayush@gov.in
                                 </div>
                                 <div className={`btn w-[90%] md:w-auto btn-svg h-[3rem] border-[1px] border-white bg-transparent rounded-none `}>
                                     <div className='btn-content gap-3'>
-                                       
+
                                         <span className='text-white'>Contact</span>
-                                       
+
                                     </div>
                                 </div>
                             </div>
