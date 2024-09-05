@@ -1,12 +1,6 @@
 import React, { useState } from "react";
 import { Parallax } from "react-parallax";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faFacebook,
-  faInstagram,
-  faTwitter,
-  faPinterest,
-} from "@fortawesome/free-brands-svg-icons";
 import { useEffect } from "react";
 
 const Footer = () => {

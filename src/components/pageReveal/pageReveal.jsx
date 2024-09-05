@@ -9,7 +9,7 @@ const PageReveal = () => {
   useEffect(() => {
     const tl = gsap.timeline({
       onComplete: () => {
-        window.location.href = "/main"; // Use href for a smooth redirect
+        window.location.href = "/app"; // Use href for a smooth redirect
       }
     });
 
