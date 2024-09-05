@@ -34,7 +34,7 @@ const Header = () => {
   }, []);
 
   return (
-    <header className={`z-[2] fixed w-full p-mobile text-black bg-white`}>
+    <header className={`z-[100] fixed w-full p-mobile text-black bg-white`}>
       <div className="flex items-center bg-transparent justify-between w-full p-nav">
         <div className="hidden md:flex">
           <picture>
