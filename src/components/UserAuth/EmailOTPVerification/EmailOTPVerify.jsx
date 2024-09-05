@@ -1,12 +1,11 @@
 /* eslint-disable no-unused-vars */
 import OTPVerification from "../Shared/OTPVerification";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import FailureAlert from "../Shared/FailureAlert";
 import SuccessAlert from "../Shared/SuccessAlert";
 import { useState, useRef } from "react";
 import axios from "axios";
 import { useDispatch } from "react-redux";
-import { resendVerification } from "../../../store/Slices/resendVerificationSlice";
 
 function maskEmail(email) {
   const [localPart, domain] = email.split("@");
@@ -17,6 +16,7 @@ function maskEmail(email) {
 
 export default function EmailOTPVerify() {
   const location = useLocation();
+  const navigate = useNavigate();
   const email = location.state?.email;
   const maskedEmail = email ? maskEmail(email) : "";
   const dispatch = useDispatch();
@@ -47,6 +47,8 @@ export default function EmailOTPVerify() {
       if (response.data.success) {
         setAlert({ type: "success", message: "Email verified successfully" });
         clearOtpFields();
+        // Navigate to the login page
+        navigate("/login");
       } else {
         setAlert({
           type: "failure",
@@ -64,23 +66,23 @@ export default function EmailOTPVerify() {
     }
   };
 
-  const handleResend = async () => {
-    try {
-      const response = await dispatch(
-        resendVerification({
-          url: "http://localhost:3000/user/resend/email/otp",
-          userData: { email },
-        })
-      ).unwrap();
-      setAlert({ type: "success", email, message: "Email otp sent successfull!" });
-    } catch (error) {
-      console.error("Error:", error);
-      setAlert({
-        type: "failure",
-        message:   error || "Failed to resend otp ",
-      });
-    }
-  };
+  // const handleResend = async () => {
+  //   try {
+  //     const response = await dispatch(
+  //       resendVerification({
+  //         url: "http://localhost:3000/user/resend/email/otp",
+  //         userData: { email },
+  //       })
+  //     ).unwrap();
+  //     setAlert({ type: "success", email, message: "Email otp sent successfull!" });
+  //   } catch (error) {
+  //     console.error("Error:", error);
+  //     setAlert({
+  //       type: "failure",
+  //       message:   error || "Failed to resend otp ",
+  //     });
+  //   }
+  // };
 
   return (
     <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
@@ -89,7 +91,7 @@ export default function EmailOTPVerify() {
         label2={`Enter the 4-digit verification code that was sent to your email ${maskedEmail}`}
         handleOnClick={handleOnClick}
         otpRefs={otpRefs}
-        handleResend={handleResend}
+        // handleResend={handleResend}
       />
       <div className="mt-10">
         {alert.type === "success" ? (

@@ -24,7 +24,7 @@ const HealthCard = () => {
   
     return (
         <>
-            <section id='about-us' className=' relative'>
+            <section id='about-us' className=' relative pt-[var(--section-padding)]'>
                 <div className='border-top-ornament'>
                     <div className="ornament">
                         <img src="" alt="" />

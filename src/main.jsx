@@ -16,21 +16,34 @@ import Register from './components/UserAuth/Register/RegisterPage.jsx'
 import Login from './components/UserAuth/Login/LoginPage.jsx'
 import HealthMain from './components/pages/healthCard/HealthMain.jsx'
 import AyushServices from './components/pages/ayushPage/AyushServicePage/AyushServices.jsx'
+import EmailOTPVerify from './components/UserAuth/EmailOTPVerification/EmailOTPVerify.jsx'
+import AboutUs from './components/pages/aboutUs/AboutUs.jsx';
+import AboutUsMain from './components/pages/aboutUs/AboutUsMain.jsx';
+import Cities from './components/pages/cities/Cities.jsx';
+import Banglore from './components/pages/cities/Banglore.jsx';
 
 const router = createBrowserRouter([
   {
     path: '/login',
-    element: <Login/>
+    element: <Login />
   },
   {
     path: '/register',
     element: <Register />
   },
- 
+  {
+    path: "/verify/email/otp",
+    element: <EmailOTPVerify />
+  },
   {
     path: '/',
     element: <App />,
     children: [
+
+      {
+        index: true,
+        element: <Main />
+      },
       {
         path: "/main",
         element: <Main />
@@ -51,6 +64,18 @@ const router = createBrowserRouter([
         path: "/services",
         element: <Services />
       },
+      {
+        path: "/aboutus",
+        element: <AboutUsMain />
+      },
+      {
+        path: "/cities",
+        element: <Cities />
+      },
+      {
+        path: "/banglore",
+        element: <Banglore />
+      }
     ]
   },
 ]);

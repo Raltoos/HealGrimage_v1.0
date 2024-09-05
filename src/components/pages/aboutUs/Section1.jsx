@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { Parallax } from "react-parallax";
-import { NavLink } from "react-router-dom";
 import { useEffect } from "react";
-import service from "../../../assets/service.svg";
-const AboutUs = () => {
+import { NavLink } from "react-router-dom";
+import people from './images/people.svg'
+
+const Section1 = () => {
   const [parallaxStrength, setParallaxStrength] = useState(100);
 
   useEffect(() => {
@@ -24,13 +25,13 @@ const AboutUs = () => {
 
   return (
     <>
-      <section id="about-us" className="pt-[var(--section-padding)] relative">
+      <section id="about-us" className="section-padding relative">
         <div className="border-top-ornament">
           <div className="ornament">
             <img src="" alt="" />
           </div>
         </div>
-        <div className="w-full bg-[#003B6C] flex-custom-center">
+        <div className="w-full bg-[#F8F9FC] flex-custom-center">
           <div className="flex flex-col md:flex-row relative w-[80%] items-center gap-[3rem] h-full">
             <div className="flex md:justify-center w-full relative h-full">
               <div className="flex-custom-col items-center md:items-start justify-center gap-4 py-4">
@@ -38,36 +39,33 @@ const AboutUs = () => {
                                     <span className="span-margin eyebrow text-hero-span text-[1.15rem] text-[var(--color-white)] font-karla text-shadow">• ABOUT US
                                     </span>
                                 </div> */}
-                <div className="col-row col-row-title medium text-shadow mb-2 mt-5">
-                  <h2 className="text-white">AYUSH</h2>
+                <div className="col-row col-row-title medium text-shadow mb-2">
+                  <h2 className="text-black">About Us</h2>
                 </div>
                 <div className="max-w-[90%] text-[1.5rem] space-y-6 py-2">
                   <div className="md:text-left text-center w-full space-y-2">
-                    <p className="font-cormo font-medium text-white">
-                      The Ministry of AYUSH was established by the Government of
-                      India to promote and regulate these practices, emphasizing
-                      their role in maintaining public health and wellness.
-                    </p>
+                    <p className="font-cormo font-medium text-black">
+                    At HealGrimage, we take care of everything. From selecting the best hospitals and doctors to arranging travel logistics, accommodations, and personalized post-treatment care, we ensure a smooth journey from start to finish. Our platform empowers patients with transparent information, competitive pricing, and access to trusted healthcare providers, removing the hassle of dealing with multiple intermediaries.
 
-                    <NavLink to="/ayush/services">
-                      <button className="p-2 text-white bg-[#052560] rounded-md">
-                        Get Plan
-                      </button>
-                    </NavLink>
+                    </p>
                   </div>
                 </div>
-                {/* <div className={`btn w-[90%] md:w-auto btn-svg h-[3rem] border-[1px] border-black bg-transparent rounded-none `}>
-                                    <div className='btn-content gap-3'>
-                                        <img className='size-4 first-img' src="/images/symbols/section-symbol.svg" alt="Ornament" />
-                                        <span className='text-[var(--color-dark)]'>Read more</span>
-                                        <img className='size-4 second-img' src="/images/symbols/section-symbol.svg" alt="Ornament" />
-                                    </div>
-                                </div> */}
+                <div
+                  className={`btn w-[90%] md:w-auto btn-svg h-[3rem] border-[1px] border-white bg-transparent rounded-none `}
+                >
+                  {/* <div className="btn-content gap-3">
+                    <NavLink to="/ayush/services">
+                      <button className="bg-[#052560] text-white p-2 rounded-md">
+                        Get Plans
+                      </button>
+                    </NavLink>
+                  </div> */}
+                </div>
               </div>
             </div>
 
             <div className="h-full flex items-center justify-center">
-              <Parallax bgImage={service} strength={parallaxStrength}>
+              <Parallax bgImage={people} strength={parallaxStrength}>
                 <div className="md:h-[30rem] h-[25rem] md:w-[33rem] w-[100vw] bg-cover" />
               </Parallax>
             </div>
@@ -78,4 +76,4 @@ const AboutUs = () => {
   );
 };
 
-export default AboutUs;
+export default Section1;

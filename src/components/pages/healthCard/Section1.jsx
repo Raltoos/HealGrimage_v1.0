@@ -3,8 +3,8 @@ import { Parallax } from "react-parallax";
 import card from "./images/card.svg";
 
 const Section1 = () => {
-  const [parallaxStrength, setParallaxStrength] = useState(100);
-  const [isModalOpen, setIsModalOpen] = useState(false);
+    const [parallaxStrength, setParallaxStrength] = useState(100);
+    const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
     const updateParallaxStrength = () => {
