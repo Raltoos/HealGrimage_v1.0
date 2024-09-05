@@ -75,18 +75,6 @@ const Header = () => {
               </NavLink>
             </li>
             <li className="nav-a">
-              <NavLink to="/aboutus">
-              <a className="flex-custom-center text-black relative overflow-hidden group font-karla">
-                <span className="text-[1.3rem] nav-span inline-block transition-all duration-300 ease-in-out transform group-hover:-translate-y-full group-hover:opacity-0 text-black">
-                  About Us
-                </span>
-                <span className="text-[1.3rem] nav-span absolute top-full left-0 w-full transition-all duration-300 ease-in-out transform group-hover:-translate-y-full text-black">
-                  About Us
-                </span>
-              </a>
-              </NavLink>
-            </li>
-            <li className="nav-a">
               <NavLink to="/ayush">
                 <a className="flex-custom-center text-black relative overflow-hidden group font-karla">
                   <span className="text-[1.3rem] nav-span inline-block transition-all duration-300 ease-in-out transform group-hover:-translate-y-full group-hover:opacity-0 text-black">
@@ -110,7 +98,7 @@ const Header = () => {
                 </a>
               </NavLink>
             </li>
-            <li className="nav-a">
+            {/* <li className="nav-a">
               <a className="flex-custom-center text-black relative overflow-hidden group font-karla">
                 <span className="text-[1.3rem] nav-span inline-block transition-all duration-300 ease-in-out transform group-hover:-translate-y-full group-hover:opacity-0 text-black">
                   Packages
@@ -119,7 +107,7 @@ const Header = () => {
                   Packages
                 </span>
               </a>
-            </li>
+            </li> */}
             <li className="nav-a">
               <NavLink to="/healthcard">
               <a className="flex-custom-center text-black relative overflow-hidden group font-karla">
@@ -128,6 +116,30 @@ const Header = () => {
                 </span>
                 <span className="text-[1.3rem] nav-span absolute top-full left-0 w-full transition-all duration-300 ease-in-out transform group-hover:-translate-y-full text-black">
                   Health Card
+                </span>
+              </a>
+              </NavLink>
+            </li>
+            <li className="nav-a">
+              <NavLink to="/aboutus">
+              <a className="flex-custom-center text-black relative overflow-hidden group font-karla">
+                <span className="text-[1.3rem] nav-span inline-block transition-all duration-300 ease-in-out transform group-hover:-translate-y-full group-hover:opacity-0 text-black">
+                  About Us
+                </span>
+                <span className="text-[1.3rem] nav-span absolute top-full left-0 w-full transition-all duration-300 ease-in-out transform group-hover:-translate-y-full text-black">
+                  About Us
+                </span>
+              </a>
+              </NavLink>
+            </li>
+            <li className="nav-a">
+              <NavLink to="/cities">
+              <a className="flex-custom-center text-black relative overflow-hidden group font-karla">
+                <span className="text-[1.3rem] nav-span inline-block transition-all duration-300 ease-in-out transform group-hover:-translate-y-full group-hover:opacity-0 text-black">
+                  Cities
+                </span>
+                <span className="text-[1.3rem] nav-span absolute top-full left-0 w-full transition-all duration-300 ease-in-out transform group-hover:-translate-y-full text-black">
+                  Cities
                 </span>
               </a>
               </NavLink>
