@@ -6,7 +6,7 @@ import AuthButton from "../Shared/AuthButton";
 import AuthFooter from "../Shared/AuthFooter";
 import AuthInput from "../Shared/AuthInput";
 import AuthPassInput from "../Shared/AuthPassInput";
-import { registerUser } from "../../../store/Slices/userDetailSlice";
+import { registerUser } from "../../../store/slices/userDetailSlice";
 import FailureAlert from "../Shared/FailureAlert";
 
 export default function RegisterForm() {

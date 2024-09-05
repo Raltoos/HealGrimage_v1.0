@@ -4,7 +4,7 @@ import AuthFooter from "../Shared/AuthFooter";
 import AuthInput from "../Shared/AuthInput";
 import AuthPassInput from "../Shared/AuthPassInput";
 import { useDispatch, useSelector } from "react-redux";
-import { loginUser } from "../../../store/Slices/userDetailSlice";
+import { loginUser } from "../../../store/slices/userDetailSlice";
 import { useNavigate } from "react-router-dom";
 import FailureAlert from "../Shared/FailureAlert";
 import SuccessAlert from "../Shared/SuccessAlert";
