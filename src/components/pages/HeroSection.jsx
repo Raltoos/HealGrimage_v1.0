@@ -26,38 +26,43 @@ const HeroSection = () => {
   return (
     <section id="featured" className="w-full h-full">
       <div className="flex-custom-center h-full w-full bg-white">
+        <div
+          style={{ height: "100vh" }}
+          className={`hero-image flex-custom-center w-[80%]`}
+        >
           <div
-            style={{ height: "100vh" }}
-            className={`hero-image flex-custom-center w-[80%]`}
+            className={`gap-[5rem] flex-custom-center items-center justify-center w-full h-full ${marginClass}`}
           >
-            <div
-              className={`gap-[5rem] flex-custom-center items-center justify-center w-full h-full ${marginClass}`}
-            >
-              <div className="flex-col justify-center items-start w-[500px] h-[25rem] mt-[300px]">
-                <div className="hero-title">
-                  <h1 className="text-shadow hero-h1 text-left mt-[-0.175em] mb-[-0.1em] font-cormo text-black">
-                    HealGrimage
-                  </h1>
-                </div>
-                <div className="flex items-center justify-center">
-                  <span className="text-left text-[1.53rem] mt-[-1rem] text-black font-karla">
-                    HealGrimage is at the forefront of transforming medical
-                    tourism which integrates with your medical journey, offering easy access to your
-                    health history, tailored insurance options, and real-time
-                    updates.
-                  </span>
-                </div>
-                <div className="flex items-center justify-start">
-                  <button className="bg-[#004f92] text-white p-2 rounded-xl mt-4">
-                    Talk With Us
-                  </button>
+            <div className="flex-col justify-center items-start w-[500px] h-[25rem] mt-[300px]">
+              <div className="hero-title">
+                <h1 className="text-shadow hero-h1 text-left mt-[-0.175em] mb-[-0.1em] font-cormo text-black">
+                  HealGrimage
+                </h1>
+              </div>
+              <div className="flex items-center justify-center">
+                <span className="text-left text-[1.53rem] mt-[-1rem] text-black font-karla">
+                  HealGrimage is at the forefront of transforming medical
+                  tourism which integrates with your medical journey, offering easy access to your
+                  health history, tailored insurance options, and real-time
+                  updates.
+                </span>
+              </div>
+              <div
+                className={`btn h-[2em] mt-4 w-[7.5rem] flex-custom-center hover:shadow-2xl hover:scale-105 hover:bg-opacity-90 transition-all duration-300 ease-in-out lg:h-[var(--btn-height-small)] rounded-full bg-[#052560] `}
+              >
+                <div className="btn-content flex gap-2">
+                  <a href="#news">
+                    <span className="lg:flex hidden text-white">Get a Quote</span>
+                    <span className="lg:hidden text-white">Updates</span>
+                  </a>
                 </div>
               </div>
             </div>
-            <div className="w-[130rem] md:block hidden">
-              <img src={heroImage} alt="" />
-            </div>
           </div>
+          <div className="w-[130rem] md:block hidden">
+            <img src={heroImage} alt="" />
+          </div>
+        </div>
       </div>
     </section>
   );

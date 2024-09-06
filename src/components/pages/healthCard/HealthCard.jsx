@@ -46,8 +46,7 @@ const HealthCard = () => {
                                     <div className='md:text-left text-center w-full space-y-2'>
                                        
                                         <p className='font-cormo font-medium text-white'>
-                                        The Ministry of AYUSH was established by the Government of India to promote and regulate these practices, emphasizing their role in maintaining public health and wellness.
-
+                                        The Health Card is your all-in-one solution for storing medical records and history, making your treatment experience smoother and more organized. With all your health information securely stored in one place, HealGrimage simplifies access to your medical data, allowing you to focus on your well-being. Keep your healthcare journey seamless and efficient with the convenience of the HealGrimage Health Card.
                                         </p>
                                     </div>
 

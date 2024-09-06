@@ -1,42 +1,48 @@
 import React from 'react';
 import { NavLink } from "react-router-dom";
+import marines from "../../../assets/mumbai/marine.jpg"
+import Gateway from "../../../assets/mumbai/gateway.png"
+import Sealink from "../../../assets/mumbai/sealink.png"
+import fortis from "../../../assets/mumbai/fortis.jpg"
+import kokilaben from "../../../assets/mumbai/kokilaben.png"
+import wockhardt from "../../../assets/mumbai/wockhardt.jpg"
 
 const CitiesMain = () => {
     const cardData = [
         {
-            image: '/images/carousel/section-1/banking2.jpg',
+            image: Gateway,
             text: 'Gateway of India. An iconic monument symbolizing Mumbai’s rich history and one of the city’s top tourist attractions.'
         },
         {
-            image: '/images/carousel/section-1/edu2.jpg',
+            image: marines,
             text: 'Marine Drive. A scenic promenade along the coast, known for its stunning sunset views and vibrant atmosphere.'
         },
         {
-            image: '/images/carousel/section-1/travel2.jpg',
-            text: 'Elephanta Caves. A UNESCO World Heritage site, featuring ancient rock-cut temples dedicated to Lord Shiva.'
+            image: Sealink,
+            text: 'The Bandra-Worli Sea Link is an iconic cable-stayed bridge that connects Bandra in the western suburbs to Worli in South Mumbai.'
         },
         {
-            image: '/images/carousel/section-1/consumer2.jpg',
+            image: fortis,
             text: 'Fortis Hospital. A leading multi-specialty hospital offering cutting-edge medical treatments across various specialties.'
         },
         {
-            image: '/images/carousel/section-1/com.jpg',
-            text: 'Apollo Hospitals. Known for its state-of-the-art medical facilities and high success rate in advanced surgeries.'
+            image: kokilaben,
+            text: 'Kokilaben Dhirubhai Ambani Hospital in Mumbai is a renowned multi-specialty healthcare institution, offering advanced medical treatments across a wide range of disciplines.'
         },
         {
-            image: '/images/carousel/section-1/energy.jpg',
-            text: 'Lilavati Hospital. Offers a range of healthcare services and is known for its expertise in cardiac care and oncology.'
+            image: wockhardt,
+            text: 'Wockhardt Mumbai Central Hospital is a renowned multi-specialty healthcare facility offering advanced medical care in various fields, including cardiology, neurology, and orthopedics.'
         },
         {
             image: '/images/carousel/section-1/medico.jpg',
             text: 'Cardiac Surgery. Offering world-class treatment for heart conditions, including bypass surgery, angioplasty, and valve replacements.'
         },
         {
-            image: '/images/carousel/section-1/real.jpg',
+            image: '/images/carousel/section-1/medico.jpg',
             text: 'Oncology. Advanced cancer care, including chemotherapy, radiation therapy, and cutting-edge surgical treatments.'
         },
         {
-            image: '/images/carousel/section-1/public.jpg',
+            image: '/images/carousel/section-1/medico.jpg',
             text: 'Orthopedic Surgery. Specializing in joint replacements, trauma care, and spinal surgeries using the latest techniques.'
         },
     ];
@@ -135,7 +141,7 @@ const CitiesMain = () => {
             <div className='flex justify-center py-10'>
                 <button
                     
-                    className='bg-blue-500 text-white text-lg px-6 py-3 rounded-lg hover:bg-blue-600 transition-colors'
+                    className='bg-[#003B6C] text-white text-lg px-6 py-3 rounded-lg hover:bg-[#08599d] transition-colors'
                 >
                     Next City
                 </button>
