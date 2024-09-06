@@ -1,3 +1,4 @@
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useRef, useEffect, useState } from "react";
 import AuthButton from "../Shared/AuthButton";
 import AuthFooter from "../Shared/AuthFooter";
@@ -30,9 +31,9 @@ export default function LoginForm() {
       const response = await dispatch(loginUser({ email, password })).unwrap();
       const { userId, token } = response; // Adjust according to your API response
 
-      // Store userId and token in localStorage
-      localStorage.setItem('userId', userId);
-      localStorage.setItem('token', token);
+      // Store userId and token in AsyncStorage
+      await AsyncStorage.setItem('userId', userId);
+      await AsyncStorage.setItem('token', token);
 
       setAlert({ type: "success" });
       emailRef.current.value = "";

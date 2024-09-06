@@ -12,33 +12,36 @@ const healthCardSchema = mongoose.Schema(
       required: true,
       unique: true,
     },
-    past_medical_records: [
-      {
-        condition: String,
-        description: String,
-        diagnosed_date: Date,
-        treatment: String,
-      },
-    ],
-    vaccines: [
-      {
-        vaccine_name: String,
-        date_administered: Date,
-        next_due_date: Date,
-      },
-    ],
-    tests_needed: [
-      {
-        test_name: String,
-        reason: String,
-        due_date: Date,
-        completed: Boolean,
-      },
-    ],
+    past_medical_records: { type: String },
+    //   {
+    //     condition: String,
+    //     description: String,
+    //     diagnosed_date: Date,
+    //     treatment: String,
+    //   },
+    // ],
+    vaccines: { type: String },
+    //   [
+    //   {
+    //     vaccine_name: String,
+    //     date_administered: Date,
+    //     next_due_date: Date,
+    //   },
+    // ],
+    tests_needed: { type: String },
+
+    // {
+    //   test_name: String,
+    //   reason: String,
+    //   due_date: Date,
+    //   completed: Boolean,
+    // },
+    // ],
     emergency_contact: {
-      contact_name: { type: String, required: true },
-      phone_number: { type: String, required: true },
-      relationship: { type: String, required: true },
+      type: String,
+    },
+    relationship: {
+      type: String,
     },
   },
   {
@@ -47,3 +50,4 @@ const healthCardSchema = mongoose.Schema(
 );
 
 module.exports = mongoose.model("HealthCard", healthCardSchema);
+

@@ -1,16 +1,19 @@
 const HealthCard = require("../models/healthCardModel");
 
 const createHealthCard = async (req, res) => {
+  
   try {
+    console.log("Request body:", req.body);
+
     const {
       user_id,
       health_id,
       past_medical_records,
       vaccines,
       tests_needed,
-      emergency_contact, // Include emergency_contact in the destructured object
+      emergency_contact,
+      relationship, // Include relationship if needed
     } = req.body;
-
     // Check if health_id already exists for uniqueness
     const existingCard = await HealthCard.findOne({ health_id });
     if (existingCard) {
@@ -21,10 +24,11 @@ const createHealthCard = async (req, res) => {
     const newHealthCard = new HealthCard({
       user_id,
       health_id,
-      past_medical_records,
-      vaccines,
-      tests_needed,
-      emergency_contact, // Add emergency_conxtact to the HealthCard object
+      past_medical_records: past_medical_records || [], // Default to empty array if not provided
+      vaccines: vaccines || [], // Default to empty array if not provided
+      tests_needed: tests_needed || [], // Default to empty array if not provided
+      emergency_contact,
+      relationship,
     });
 
     // Save to the database
@@ -35,7 +39,6 @@ const createHealthCard = async (req, res) => {
     res.status(500).json({ message: "Server Error", error: error.message });
   }
 };
-
 
 const getHealthCard = async (req, res) => {
   try {
