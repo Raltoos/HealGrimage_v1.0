@@ -20,7 +20,7 @@ import EmailOTPVerify from './components/UserAuth/EmailOTPVerification/EmailOTPV
 import AboutUs from './components/pages/aboutUs/AboutUs.jsx';
 import AboutUsMain from './components/pages/aboutUs/AboutUsMain.jsx';
 import Cities from './components/pages/cities/Cities.jsx';
-import Banglore from './components/pages/cities/Banglore.jsx';
+import Delhi from './components/pages/cities/Delhi.jsx';
 
 const router = createBrowserRouter([
   {
@@ -73,8 +73,8 @@ const router = createBrowserRouter([
         element: <Cities />
       },
       {
-        path: "/banglore",
-        element: <Banglore />
+        path: "/delhi",
+        element: <Delhi />
       }
     ]
   },

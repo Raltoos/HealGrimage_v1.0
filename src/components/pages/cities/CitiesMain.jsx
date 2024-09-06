@@ -131,7 +131,7 @@ const CitiesMain = () => {
                     </div>
                 </div>
             </div>
-            <NavLink to='/banglore'>
+            <NavLink to='/delhi'>
             <div className='flex justify-center py-10'>
                 <button
                     

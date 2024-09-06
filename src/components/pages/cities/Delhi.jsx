@@ -1,6 +1,6 @@
-import React from 'react';
+import VideoPlayerPage from "../VR/VideoPlayerPage" 
 
-const Banglore = () => {
+const Delhi = () => {
     const cardData = [
         {
             image: '/images/carousel/section-1/banking2.jpg',
@@ -46,9 +46,9 @@ const Banglore = () => {
             <div className='industry-container'>
                 <div className='flex justify-center w-full'>
                     <div className='flex flex-col text-center w-full flex-custom-center'>
-                        <h2 className='text-4xl font-bold text-black mb-4'>Bangalore</h2>
+                        <h2 className='text-4xl font-bold text-black mb-4'>Delhi</h2>
                         <p className='text-2xl text-black mb-6 w-[80%]'>
-                            Bangalore is a top destination for medical tourism with world-class hospitals. 
+                            Delhi is a top destination for medical tourism with world-class hospitals. 
                             It offers cutting-edge treatments, and visitors can also explore the city's 
                             vibrant tech culture and historical landmarks.
                         </p>
@@ -84,7 +84,7 @@ const Banglore = () => {
             {/* Hospitals */}
             <div className='relative py-20 w-full flex justify-center items-center'>
                 <div className='flex flex-col gap-6 w-full justify-center items-center'>
-                    <h3 className='text-3xl font-semibold text-black mb-4'>Hospitals in Bangalore</h3>
+                    <h3 className='text-3xl font-semibold text-black mb-4'>Hospitals in Delhi</h3>
                     <div className='md:flex md:flex-row flex flex-col justify-around w-[90%] gap-6'>
                         {cardData.slice(3, 6).map((card, colIndex) => (
                             <div key={colIndex} className='flip-card md:w-[30%] md:h-[15rem] w-full'>
@@ -102,6 +102,12 @@ const Banglore = () => {
                                 </div>
                             </div>
                         ))}
+                    </div>
+                    <div className="w-[80%] h-fit flex flex-col items-center justify-center gap-10 bg-[#052560] rounded-2xl mt-5">
+                        <h4 className="text-white mt-[2rem]">Explore our latest VR exploration feature</h4>
+                        <div className="w-[90%]">
+                            <VideoPlayerPage />
+                        </div>
                     </div>
                 </div>
             </div>
@@ -134,4 +140,4 @@ const Banglore = () => {
     );
 };
 
-export default Banglore;
+export default Delhi;
