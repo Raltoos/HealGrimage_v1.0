@@ -312,7 +312,7 @@ const Section1 = () => {
           </div>
         </div>
 
-        <div className={`w-full ${isModalOpen ? "h-[1300px]" : "h-0"} flex justify-center`}>
+        <div className={`w-full ${isModalOpen ? "h-[40rem]" : "h-0"} flex justify-center`}>
           {isModalOpen && (
             <div className="flexbg-white p-8 rounded-md w-[90%] md:w-[80%] lg:w-[60%] max-h-[90vh]">
               <h3 className="text-2xl font-semibold mb-10">
