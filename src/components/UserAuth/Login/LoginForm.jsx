@@ -29,11 +29,12 @@ export default function LoginForm() {
 
     try {
       const response = await dispatch(loginUser({ email, password })).unwrap();
-      const { userId, token } = response; // Adjust according to your API response
+      const { user_id, token } = response; // Adjust according to your API response
 
       // Store userId and token in AsyncStorage
-      await AsyncStorage.setItem('userId', userId);
+      await AsyncStorage.setItem('userId', user_id);
       await AsyncStorage.setItem('token', token);
+      console.log(user_id)
 
       setAlert({ type: "success" });
       emailRef.current.value = "";
