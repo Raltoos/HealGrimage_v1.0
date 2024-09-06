@@ -4,7 +4,7 @@ export default function AuthInput({ inputRef, label, type, disabled }) {
     <div>
       <label
         htmlFor={type}
-        className="block text-sm font-medium leading-6 text-white"
+        className="block text-sm font-medium leading-6 text-black"
       >
         {label}
       </label>
