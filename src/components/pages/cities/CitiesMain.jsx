@@ -6,6 +6,10 @@ import Sealink from "../../../assets/mumbai/sealink.png"
 import fortis from "../../../assets/mumbai/fortis.jpg"
 import kokilaben from "../../../assets/mumbai/kokilaben.png"
 import wockhardt from "../../../assets/mumbai/wockhardt.jpg"
+import neurology from "../../../assets/neurology.png";
+import oncology from "../../../assets/oncology.png";
+import transplant from "../../../assets/transplant.png";
+
 
 const CitiesMain = () => {
     const cardData = [
@@ -34,15 +38,15 @@ const CitiesMain = () => {
             text: 'Wockhardt Mumbai Central Hospital is a renowned multi-specialty healthcare facility offering advanced medical care in various fields, including cardiology, neurology, and orthopedics.'
         },
         {
-            image: '/images/carousel/section-1/medico.jpg',
-            text: 'Cardiac Surgery. Offering world-class treatment for heart conditions, including bypass surgery, angioplasty, and valve replacements.'
+            image: neurology,
+            text: 'Explore advanced neurology treatments tailored to diagnose, manage, and treat complex neurological conditions with precision and care.'
         },
         {
-            image: '/images/carousel/section-1/medico.jpg',
+            image: oncology,
             text: 'Oncology. Advanced cancer care, including chemotherapy, radiation therapy, and cutting-edge surgical treatments.'
         },
         {
-            image: '/images/carousel/section-1/medico.jpg',
+            image: transplant,
             text: 'Orthopedic Surgery. Specializing in joint replacements, trauma care, and spinal surgeries using the latest techniques.'
         },
     ];
@@ -116,16 +120,16 @@ const CitiesMain = () => {
             {/* Treatments */}
             <div className='relative py-20 w-full flex justify-center items-center'>
                 <div className='flex flex-col gap-6 w-full justify-center items-center'>
-                    <h3 className='text-3xl font-semibold text-black mb-4'>Available Treatments</h3>
+                    <h3 className='text-3xl font-semibold text-black mb-4'>Top Treatments</h3>
                     <div className='md:flex md:flex-row flex flex-col justify-around w-[90%] gap-6'>
                         {cardData.slice(6, 9).map((card, colIndex) => (
                             <div key={colIndex} className='flip-card md:w-[30%] md:h-[15rem] w-full'>
                                 <div className='flip-card-inner'>
-                                    <div className='flip-card-front'>
+                                    <div className='flip-card-front flex justify-center items-center'>
                                         <img
                                             src={card.image}
                                             alt={`Image ${colIndex + 7}`}
-                                            className='carousel-image w-full h-[20rem] object-cover rounded-lg'
+                                            className='carousel-image w-[10rem] h-[20rem] object-contain rounded-lg'
                                         />
                                     </div>
                                     <div className='flip-card-back p-6 flex justify-center items-center'>
