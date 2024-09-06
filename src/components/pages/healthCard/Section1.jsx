@@ -116,7 +116,7 @@
 //                 <input type="date" className="w-full p-2 border rounded-md" />
 
 //                 <label className="block text-gray-700 font-semibold">
-//                   Test needed 
+//                   Test needed
 //                 </label>
 //                 <input type="text" className="w-full p-2 border rounded-md" />
 
@@ -136,7 +136,7 @@
 //                 <input type="date" className="w-full p-2 border rounded-md" />
 
 //                 <label className="block text-gray-700 font-semibold">
-//                   Emergency contact 
+//                   Emergency contact
 //                 </label>
 //                 <input type="text" className="w-full p-2 border rounded-md" />
 
@@ -226,7 +226,11 @@ const Section1 = () => {
   useEffect(() => {
     const getUserId = async () => {
       try {
+<<<<<<< HEAD
         const userId = await AsyncStorage.getItem("user_id");
+=======
+        const userId = "66da200be761cb2571d51786";
+>>>>>>> refs/remotes/origin/main
         console.log("Fetched userId from AsyncStorage:", userId);
         if (userId) {
           setFormData((prevState) => ({
@@ -255,7 +259,10 @@ const Section1 = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:3000/api/healthCard", formData);
+      const response = await axios.post(
+        "http://localhost:3000/api/healthCard",
+        formData
+      );
       console.log(response.data);
       // Close the modal on successful submission
       setIsModalOpen(false);
@@ -283,18 +290,27 @@ const Section1 = () => {
             <div className="flex md:justify-center w-full relative h-full">
               <div className="flex-custom-col items-center md:items-start justify-center gap-4 mt-10 py-4">
                 <div className="col-row col-row-title medium text-shadow mb-2">
+<<<<<<< HEAD
                   <h2 className="text-black">
                     For contacting the Ministry of AYUSH in India.
                   </h2>
+=======
+                  <h2 className="text-black">Create your own</h2>
+>>>>>>> refs/remotes/origin/main
                 </div>
                 <div className="max-w-[90%] text-[1.5rem] space-y-6 py-2">
                   <div className="md:text-left text-center w-full space-y-2">
                     <p className="font-cormo font-medium text-black">
+<<<<<<< HEAD
                       Address: AYUSH Bhawan, B-Block, GPO Complex, INA, New Delhi - 110023, India
                       <br />
                       Phone Numbers: +91-11-24651950, +91-11-24651937
                       <br />
                       Email: For General Queries: webmanager-ayush@gov.in
+=======
+                      Create your personalized Health Card now to keep all your
+                      medical information at your fingertips.
+>>>>>>> refs/remotes/origin/main
                     </p>
                   </div>
                 </div>
@@ -311,7 +327,9 @@ const Section1 = () => {
           </div>
         </div>
 
-        <div className={`w-full ${isModalOpen ? "h-[1300px]" : "h-0"} flex justify-center`}>
+        <div
+          className={`w-full ${isModalOpen ? "h-[1300px]" : "h-0"} flex justify-center`}
+        >
           {isModalOpen && (
             <div className="flexbg-white p-8 rounded-md w-[90%] md:w-[80%] lg:w-[60%] max-h-[90vh]">
               <h3 className="text-2xl font-semibold mb-10">
