@@ -1,7 +1,6 @@
-import React, { useState } from "react";
-import { Parallax } from "react-parallax";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useState } from "react";
 import { useEffect } from "react";
+import { NavLink } from "react-router-dom";
 
 const Footer = () => {
   const [parallaxStrength, setParallaxStrength] = useState(100);
@@ -34,23 +33,50 @@ const Footer = () => {
                 <span className="eyebrow text-[0.8rem] text-black">Menu</span>
               </div>
               <ul className="menu-list">
-                {[
-                  { text: "Home", href: "#featured" },
-                  { text: "About Us", href: "#category" },
-                  { text: "AYUSH", href: "#about-us" },
-                  { text: "Services", href: "#gallery" },
-                ].map((item, index) => (
-                  <li className="menu-item" key={index}>
+                <NavLink to="/">
+                  <li className="menu-item">
                     <a
-                      href={item.href}
-                      className="text-[#38220f] menu-link hover-circle"
+                      className="text-black menu-link hover-circle"
                     >
                       <span className="side-nav-link font-cormo font-medium text-black">
-                        {item.text}
+                        Home
                       </span>
                     </a>
                   </li>
-                ))}
+                </NavLink>
+                <NavLink to="/ayush">
+                  <li className="menu-item">
+                    <a
+                      className="text-black menu-link hover-circle"
+                    >
+                      <span className="side-nav-link font-cormo font-medium text-black">
+                        AYUSH
+                      </span>
+                    </a>
+                  </li>
+                </NavLink>
+                <NavLink to="/services">
+                  <li className="menu-item">
+                    <a
+                      className="text-black menu-link hover-circle"
+                    >
+                      <span className="side-nav-link font-cormo font-medium text-black">
+                        Services
+                      </span>
+                    </a>
+                  </li>
+                </NavLink>
+                <NavLink to="/healthcard">
+                  <li className="menu-item">
+                    <a
+                      className="text-black menu-link hover-circle"
+                    >
+                      <span className="side-nav-link font-cormo font-medium text-black">
+                        Health Card
+                      </span>
+                    </a>
+                  </li>
+                </NavLink>
               </ul>
             </nav>
             {/* ShortLinks */}

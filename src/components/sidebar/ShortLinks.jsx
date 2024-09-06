@@ -1,13 +1,11 @@
-import React from 'react'
-
 const ShortLinks = () => {
     return (
         <>
-            <div className='short-links-container'>
+            <div className='short-links-container bg-white'>
                 <div className='short-links-column'>
                 <div className='column-title'><span className='eyebrow text-[0.8rem]'>Links</span></div>
                 <ul className='short-links-list'>
-                  {["E-commerce", "Jewellers", "Landing page"].map((item, index) => (
+                  {["Packages", "Health Card", "Our Story"].map((item, index) => (
                     <li className='short-link-item' key={index}>
                       <a className='short-link font-karla' href="#">
                         <span className='text-[1.02rem] hover-underline'>{item}</span>
