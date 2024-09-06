@@ -50,9 +50,15 @@ const AboutUs = () => {
                     </p>
 
                     <NavLink to="/ayush/services">
-                      <button className="p-2 text-white bg-[#052560] rounded-md">
-                        Get Plan
-                      </button>
+                    <div
+                className={`btn h-[2em] mt-4 w-[9.5rem] flex-custom-center hover:shadow-2xl hover:scale-105 hover:bg-opacity-90 transition-all duration-300 ease-in-out lg:h-[var(--btn-height-small)] rounded-full bg-[#052560] `}
+              >
+                <div className="btn-content flex-custom-center ">
+                  <a href="#news">
+                    <span className=" text-white">Get your plan</span>
+                  </a>
+                </div>
+              </div>
                     </NavLink>
                   </div>
                 </div>

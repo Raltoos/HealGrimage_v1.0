@@ -55,13 +55,19 @@ const Intro = () => {
                   </div>
                 </div>
                 <div
-                  className={`btn w-[90%] md:w-auto btn-svg h-[3rem] border-[1px] border-white bg-transparent rounded-none `}
+                  className={``}
                 >
                   <div className="btn-content gap-3">
                     <NavLink to="/ayush/services">
-                      <button className="bg-[#052560] text-white p-2 rounded-md">
-                        Get Plans
-                      </button>
+                    <div
+                className={`btn h-[2em] w-[7.5rem] flex-custom-center hover:shadow-2xl hover:scale-105 hover:bg-opacity-90 transition-all duration-300 ease-in-out lg:h-[var(--btn-height-small)] rounded-full bg-[#052560] `}
+              >
+                <div className="btn-content flex gap-2">
+                  <a href="#news">
+                    <span className="lg:flex hidden text-white">Get a Quote</span>
+                  </a>
+                </div>
+              </div>
                     </NavLink>
                   </div>
                 </div>

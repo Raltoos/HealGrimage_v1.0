@@ -5,6 +5,7 @@ import { Outlet } from 'react-router-dom'
 import Sidebar from '../components/sidebar/Sidebar'
 import ScrollToTop from '../scroll/ScrollToTop'
 import ChatBot from '../components/ChatBot'
+import GoogleTranslate from '../components/translator/GoogleTranslate'
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
         <Sidebar />
         <Outlet />
         <Footer />
+        <GoogleTranslate/>
         <ChatBot />
       </div>
     </div>

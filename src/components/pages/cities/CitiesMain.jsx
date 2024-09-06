@@ -135,7 +135,7 @@ const CitiesMain = () => {
             <div className='flex justify-center py-10'>
                 <button
                     
-                    className='bg-blue-500 text-white text-lg px-6 py-3 rounded-lg hover:bg-blue-600 transition-colors'
+                    className='bg-[#003B6C] text-white text-lg px-6 py-3 rounded-lg hover:bg-[#08599d] transition-colors'
                 >
                     Next City
                 </button>

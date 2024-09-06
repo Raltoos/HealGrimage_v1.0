@@ -174,7 +174,7 @@ Now, please respond to the following user query:
     <>
       <button
         onClick={toggleChatbot}
-        className="fixed bottom-5 right-5 bg-blue-500 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 focus:outline-none z-50"
+        className="fixed bottom-5 right-5 bg-[#003B6C] text-white p-3 rounded-full shadow-lg hover:bg-blue-700 focus:outline-none z-50"
       >
         💬 Chat
       </button>

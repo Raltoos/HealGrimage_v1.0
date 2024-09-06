@@ -42,9 +42,16 @@ const AboutUs = () => {
                     </p>
                   </div>
                   <a href="#plans">
-                    <button className="bg-[#052560] p-2 text-white text-lg rounded-md mt-5">
-                      Get Plans
-                    </button>
+                  <div
+                className={`btn h-[2em] mt-4 w-[7.5rem] flex-custom-center hover:shadow-2xl hover:scale-105 hover:bg-opacity-90 transition-all duration-300 ease-in-out lg:h-[var(--btn-height-small)] rounded-full bg-[#052560] `}
+              >
+                <div className="btn-content flex gap-2 flex-custom-center">
+                  <a href="#news">
+                    <span className="lg:flex hidden text-white">Get plans</span>
+                    {/* <span className="lg:hidden text-white">Updates</span> */}
+                  </a>
+                </div>
+              </div>
                   </a>
                 </div>
               </div>

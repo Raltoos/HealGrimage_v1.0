@@ -223,8 +223,8 @@ const ImageSlider = () => {
         </div>
 
         {/* Display Filtered Hospitals */}
-        <div className="w-[90%] h-[1000px] rounded-xl flex flex-col gap-3">
-          <div className="w-full flex flex-col md:flex md:flex-row md:justify-between gap-2">
+        <div className="w-[90%] max-h-[500px] rounded-xl flex flex-col gap-3 overflow-y-auto">
+          <div className="w-full flex flex-col md:flex md:flex-row md:justify-between gap-2 overflow-y-auto">
             <div className="flex gap-2 w-[2rem] items-center">
               Show
               <div>
@@ -248,7 +248,9 @@ const ImageSlider = () => {
               />
             </div>
           </div>
-          <div className="w-full bg-white h-[1000px] rounded-2xl flex flex-col gap-5 items-center p-2">
+
+          {/* Scrollable Hospital List */}
+          <div className="w-full bg-white rounded-2xl flex flex-col gap-5 items-center p-2">
             {hospitals.length > 0 ? (
               hospitals.map((hospital) => (
                 <div
@@ -266,6 +268,7 @@ const ImageSlider = () => {
             )}
           </div>
         </div>
+
       </div>
     </section>
   );
