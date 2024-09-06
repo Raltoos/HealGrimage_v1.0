@@ -40,9 +40,9 @@ const Header = () => {
         <div className="hidden md:flex">
           <picture>
             <img
-              src="/images/symbols/icon.svg"
+              src="./logowithoutbg.png"
               alt=""
-              className={`hero-logo flex-custom-center`}
+              className={`hero-logo flex-custom-center w-[5rem] h-[3.5rem]`}
             />
           </picture>
         </div>
