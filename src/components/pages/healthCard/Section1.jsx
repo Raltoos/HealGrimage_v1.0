@@ -55,18 +55,13 @@ const Section1 = () => {
               <div className="flex-custom-col items-center md:items-start justify-center gap-4 mt-10 py-4">
                 <div className="col-row col-row-title medium text-shadow mb-2">
                   <h2 className="text-black">
-                    For contacting the Ministry of AYUSH in India.
+                    Create your own
                   </h2>
                 </div>
                 <div className="max-w-[90%] text-[1.5rem] space-y-6 py-2">
                   <div className="md:text-left text-center w-full space-y-2">
                     <p className="font-cormo font-medium text-black">
-                      Address: AYUSH Bhawan, B-Block, GPO Complex, INA, New
-                      Delhi - 110023, India
-                      <br />
-                      Phone Numbers: +91-11-24651950, +91-11-24651937
-                      <br />
-                      Email: For General Queries: webmanager-ayush@gov.in
+                    Create your personalized Health Card now to keep all your medical information at your fingertips.
                     </p>
                   </div>
                 </div>

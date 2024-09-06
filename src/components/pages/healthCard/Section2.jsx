@@ -6,30 +6,24 @@ import Section1 from './Section1';
 const sections = [
   {
     id: '#1',
-    title: 'Ayurveda',
-    content: 'Ancient system of medicine that focuses on balance in bodily systems through diet, herbal treatment, and yogic breathing.',
+    title: 'Centralized Records',
+    content: 'Eliminates the hassle of managing scattered medical documents.',
   },
   {
     id: '#2',
-    title: 'Yoga',
+    title: 'Secure Data Storage',
     content: 'Physical, mental, and spiritual practices aimed at achieving harmony between mind, body, and soul',
   },
   {
     id: '#3',
-    title: 'Unani',
-    content: 'Based on the teachings of Hippocrates and Galen, it involves the use of herbal remedies and therapeutic techniques for maintaining health',
+    title: 'Easy Access',
+    content: 'Provides quick and convenient access to medical history anytime.',
   },
   {
     id: '#4',
-    title: 'Siddha',
-    content: 'A traditional system of healing that originated in Tamil Nadu, focusing on the concept of balance among bodily humors and elements.',
+    title: 'Streamlined Treatment Process	',
+    content: 'Simplifies sharing of medical data with healthcare providers.',
   },
-  {
-    id: '#5',
-    title: 'Homeopathy',
-    content: 'WA medical system based on the belief that the body can cure itself using tiny amounts of natural substanceshether buying or selling, we help you get the deal done with our comprehensive range of transaction advisory services.',
-  },
-  
 ];
 
 const Section2 = () => {
@@ -52,7 +46,7 @@ const Section2 = () => {
                 textAlign: 'left'
               }}
             >
-             Ayush India refers to traditional Indian systems of medicine, particularly Ayurveda, Yoga, Unani, Siddha, and Homeopathy, collectively known as AYUSH.
+             Unlock seamless healthcare management with the HealGrimage Health Card, designed to centralize and secure all your medical records in one place.
             </h3>
           </div>
 
@@ -77,7 +71,7 @@ const Section2 = () => {
                 className="Wysiwyg Wysiwyg--medium text-xl flex-custom-center  Wysiwyg--light-bg w-full z-10 | lg:w-5/12"
                 data-aos="fade-left"
               >
-                <p className='text-white'>
+                <p className='text-white text-xl'>
                   {section.content}
                 </p>
               </div>
