@@ -4,6 +4,7 @@ import Footer from '../components/layout/Footer'
 import { Outlet } from 'react-router-dom'
 import Sidebar from '../components/sidebar/Sidebar'
 import ScrollToTop from '../scroll/ScrollToTop'
+import ChatBot from '../components/ChatBot'
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
         <Sidebar />
         <Outlet />
         <Footer />
+        <ChatBot />
       </div>
     </div>
   )
