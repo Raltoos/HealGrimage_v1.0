@@ -231,7 +231,6 @@ const YoutubePlayer = ({ videoId }) => {
         currentTime={currentTime}
         setCurrentTime={setCurrentTime}
       />
-      {/* <div className="absolute inset-0 pointer-events-auto" /> */}
     </div>
   );
 };

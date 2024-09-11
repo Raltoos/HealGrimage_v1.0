@@ -226,7 +226,7 @@ const Section1 = () => {
   useEffect(() => {
     const getUserId = async () => {
       try {
-        const userId = "66da200be761cb2571d51786";
+        const userId = "66daa17fc577ec3758c15aad";
         console.log("Fetched userId from AsyncStorage:", userId);
         if (userId) {
           setFormData((prevState) => ({
