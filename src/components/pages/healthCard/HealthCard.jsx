@@ -49,8 +49,6 @@ const HealthCard = () => {
                                         The Health Card is your all-in-one solution for storing medical records and history, making your treatment experience smoother and more organized. With all your health information securely stored in one place, HealGrimage simplifies access to your medical data, allowing you to focus on your well-being. Keep your healthcare journey seamless and efficient with the convenience of the HealGrimage Health Card.
                                         </p>
                                     </div>
-
-
                                 </div>
                                 {/* <div className={`btn w-[90%] md:w-auto btn-svg h-[3rem] border-[1px] border-black bg-transparent rounded-none `}>
                                     <div className='btn-content gap-3'>
