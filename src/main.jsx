@@ -27,6 +27,7 @@ import Calendar from './dashboard/src/pages/Calendar';
 import Profile from './dashboard/src/pages/Profile';
 import Settings from './dashboard/src/pages/Settings';
 import Tables from './dashboard/src/pages/Tables';
+import CartPage from "./components/Cart/CartPage.jsx";
 
 const router = createBrowserRouter([
   {
@@ -146,6 +147,11 @@ const router = createBrowserRouter([
         path: "cities",
         element: <Cities />,
       },
+      {
+        path: "cart",
+        element: <CartPage/>,
+      },
+
       {
         path: "delhi",
         element: <Delhi />,
