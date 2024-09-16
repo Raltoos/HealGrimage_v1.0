@@ -3,7 +3,7 @@ import HeroSection from "../pages/HeroSection";
 import ImageGallery from "../pages/ImageGallery";
 import Intro from "../pages/Intro";
 import LNavbar from "./components/LNavbar/LNavbar";
-import "./landing.css"; // Import your CSS file
+import "./landing.css";
 
 const Landing = () => {
   return (
