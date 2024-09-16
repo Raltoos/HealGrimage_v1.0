@@ -5,7 +5,7 @@ const Intro = () => {
   const contentRef = useRef(null);
 
   return (
-    <section className="h-full w-full py-[--var(section-padding)] bg-white flex flex-col items-center">
+    <section className="h-full w-full py-[--var(section-padding)] bg-white flex flex-col items-center" id="N">
       <div className="w-[80%] flex items-center justify-center">
         <div className="w-[90%] h-full flex lg:flex-row flex-col justify-between lg:pl-20  md:items-center">
           <div className="relative flex justify-center items-center">

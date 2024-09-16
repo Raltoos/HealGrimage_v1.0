@@ -1,19 +1,19 @@
 const packageData = [
   {
-    name: 'Ayurveda Detox Package',
-    price: 100,
+    name: 'Bangalore Hospital Visit',
+    price: '10L',
     invoiceDate: `Sep 10,2024`,
     status: 'Paid',
   },
   {
     name: 'Mumbai Local Sightseeing',
-    price: 59,
+    price: ' 50,000',
     invoiceDate: `Sep 13,2024`,
     status: 'Paid',
   },
   {
     name: 'Mumbai Local Guide',
-    price: 15,
+    price: '10,000',
     invoiceDate: `Sep 13,2024`,
     status: 'Pending',
   },
@@ -47,7 +47,7 @@ const TableThree = () => {
                   <h5 className="text-xl text-black">
                     {packageItem.name}
                   </h5>
-                  <p className="text-sm">${packageItem.price}</p>
+                  <p className="text-sm">Rs{packageItem.price}</p>
                 </td>
                 <td className="border-b border-[#eee] py-5 px-4 dark:border-strokedark">
                   <p className="text-black">

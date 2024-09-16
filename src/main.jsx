@@ -27,7 +27,11 @@ import Calendar from './dashboard/src/pages/Calendar';
 import Profile from './dashboard/src/pages/Profile';
 import Settings from './dashboard/src/pages/Settings';
 import Tables from './dashboard/src/pages/Tables';
+<<<<<<< HEAD
+import CartPage from "./components/Cart/CartPage.jsx";
+=======
 import DefaultLayout from "./dashboard/src/layout/DefaultLayout.jsx";
+>>>>>>> refs/remotes/origin/main
 
 const router = createBrowserRouter([
   {
@@ -185,7 +189,16 @@ const router = createBrowserRouter([
         element: <Cities />,
       },
       {
+<<<<<<< HEAD
+        path: "cart",
+        element: <CartPage/>,
+      },
+
+      {
+        path: "delhi",
+=======
         path: "/app/cities/delhi",
+>>>>>>> refs/remotes/origin/main
         element: <Delhi />,
       },
     ],
