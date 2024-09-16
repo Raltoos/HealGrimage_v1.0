@@ -1,5 +1,5 @@
 {
-  "name": "Heal Grimage",
+  "name": "HealGrimage",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,6 +10,17 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@react-jvectormap/india": "^1.0.1",
+    "apexcharts": "^3.41.0",
+    "flatpickr": "^4.6.13",
+    "headlessui": "^0.0.0",
+    "jsvectormap": "^1.5.3",
+    "match-sorter": "^6.3.1",
+    "react-apexcharts": "^1.4.1",
+    "react-hot-toast": "^2.4.1",
+    "react-jvectormap": "^0.0.16",
+    "react-toastify": "^9.1.3",
+    "sort-by": "^0.0.2",
     "@fortawesome/fontawesome-svg-core": "^6.6.0",
     "@fortawesome/free-brands-svg-icons": "^6.6.0",
     "@fortawesome/react-fontawesome": "^0.2.2",
@@ -33,7 +44,8 @@
     "react-transition-group": "^4.4.5",
     "rollup": "^4.21.2",
     "split-type": "^0.3.4",
-    "swiper": "^11.1.5"
+    "swiper": "^11.1.5",
+    "file-loader": "^6.2.0"
   },
   "devDependencies": {
     "@types/react": "^18.3.3",

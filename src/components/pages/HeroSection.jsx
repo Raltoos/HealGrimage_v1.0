@@ -28,7 +28,7 @@ const HeroSection = () => {
       <div className="flex-custom-center h-full w-full bg-white">
         <div
           style={{ height: "100vh" }}
-          className={`hero-image flex-custom-center w-[80%]`}
+          className={`hero-image flex justify-between items-center w-[80%]`}
         >
           <div
             className={`gap-[5rem] flex-custom-center items-center justify-center w-full h-full ${marginClass}`}
@@ -59,7 +59,7 @@ const HeroSection = () => {
               </div>
             </div>
           </div>
-          <div className="w-[130rem] md:block hidden">
+          <div className="ml-32 w-[130rem] md:block hidden">
             <img src={heroImage} alt="" />
           </div>
         </div>
