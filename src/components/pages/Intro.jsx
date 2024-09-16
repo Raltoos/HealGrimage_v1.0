@@ -5,7 +5,7 @@ const Intro = () => {
   const contentRef = useRef(null);
 
   return (
-    <section className="h-full w-full py-[--var(section-padding)] bg-white flex flex-col items-center">
+    <section className="h-full w-full py-[--var(section-padding)] bg-white flex flex-col items-center" id="N">
       <div className="w-[80%] flex items-center justify-center">
         <div className="w-[90%] h-full flex lg:flex-row flex-col justify-between lg:pl-20  md:items-center">
           <div className="relative flex justify-center items-center">
@@ -25,9 +25,9 @@ const Intro = () => {
           <div className="flex w-[30rem]">
             <div className="flex-custom-col lg:items-start justify-center hero-flex-gap sm:justify-center md:items-center">
               <div className="col-row col-row-title medium text-center md:text-left">
-                <h1 className="font-cormo text-black">
+                <h2 className="font-cormo text-black">
                   Revolutionizing Medical Tourism
-                </h1>
+                </h2>
               </div>
               <div
                 ref={contentRef}

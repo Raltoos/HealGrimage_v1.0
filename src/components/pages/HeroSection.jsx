@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import heroImage from "../../assets/hero1.svg";
 
 const HeroSection = () => {
@@ -24,17 +25,17 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section id="featured" className="w-full h-full">
-      <div className="flex-custom-center h-full w-full bg-white">
+    <section id="I" className="w-full h-full">
+      <div className="flex-custom-center h-full w-full bg-white mt-[-4rem]">
         <div
-          style={{ height: "100vh" }}
+          style={{ height: "80vh" }}
           className={`hero-image flex justify-between items-center w-[80%]`}
         >
           <div
             className={`gap-[5rem] flex-custom-center items-center justify-center w-full h-full ${marginClass}`}
           >
             <div className="flex-col justify-center items-start w-[500px] h-[25rem] mt-[300px]">
-              <div className="hero-title">
+              <div className="mb-8">
                 <h1 className="text-shadow hero-h1 text-left mt-[-0.175em] mb-[-0.1em] font-cormo text-black">
                   HealGrimage
                 </h1>
@@ -50,11 +51,10 @@ const HeroSection = () => {
               <div
                 className={`btn h-[2em] mt-4 w-[7.5rem] flex-custom-center hover:shadow-2xl hover:scale-105 hover:bg-opacity-90 transition-all duration-300 ease-in-out lg:h-[var(--btn-height-small)] rounded-full bg-[#052560] `}
               >
-                <div className="btn-content flex gap-2">
-                  <a href="#news">
-                    <span className="lg:flex hidden text-white">Get a Quote</span>
-                    <span className="lg:hidden text-white">Updates</span>
-                  </a>
+                <div className="btn-content flex gap-2 flex-custom-center">
+                  <Link to="/login">
+                    <span className="lg:flex hidden text-white">Sign in</span>
+                  </Link>
                 </div>
               </div>
             </div>

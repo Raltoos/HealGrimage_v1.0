@@ -4,7 +4,7 @@ import {features} from "../../assets/features/features"
 
 const ImageGallery = ({ className = "" }) => {
   return (
-    <>
+    <div id="F">
       <section
         className={`self-stretch flex flex-col relative items-center justify-center bg-white`}
         id="gallery"
@@ -26,7 +26,7 @@ const ImageGallery = ({ className = "" }) => {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 };
 

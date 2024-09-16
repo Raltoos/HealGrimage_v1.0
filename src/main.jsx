@@ -18,7 +18,7 @@ import AboutUsMain from "./components/pages/aboutUs/AboutUsMain.jsx";
 import Cities from "./components/pages/cities/Cities.jsx";
 import Delhi from "./components/pages/cities/Delhi.jsx";
 import DashboardLayout from "./routes/DashboardLayout.jsx";
-
+import Landing from "./components/Landing-page/Landing.jsx";
 import PageTitle from "./dashboard/src/components/PageTitle.jsx";
 import ECommerce from "./dashboard/src/pages/Dashboard/ECommerce.jsx";
 import SignIn from './dashboard/src/pages/Authentication/SignIn';
@@ -27,7 +27,11 @@ import Calendar from './dashboard/src/pages/Calendar';
 import Profile from './dashboard/src/pages/Profile';
 import Settings from './dashboard/src/pages/Settings';
 import Tables from './dashboard/src/pages/Tables';
+<<<<<<< HEAD
 import CartPage from "./components/Cart/CartPage.jsx";
+=======
+import DefaultLayout from "./dashboard/src/layout/DefaultLayout.jsx";
+>>>>>>> refs/remotes/origin/main
 
 const router = createBrowserRouter([
   {
@@ -113,18 +117,19 @@ const router = createBrowserRouter([
   },
   {
     path: "/",
+    element: <Landing />,
+  },
+  {
+    path: "/app",
     element: <App />,
     children: [
       {
         index: true,
-        element: <Main />,
+        // element: <DefaultLayout/>
+        element: <DefaultLayout/>
       },
       {
-        path: "main",
-        element: <Main />,
-      },
-      {
-        path: "ayush",
+        path: "/app/ayush",
         element: <AYUSH />,
       },
       {
@@ -132,28 +137,32 @@ const router = createBrowserRouter([
         element: <AyushServices />,
       },
       {
-        path: "healthcard",
+        path: "/app/healthcard",
         element: <HealthMain />,
       },
       {
-        path: "services",
+        path: "/app/services",
         element: <Services />,
       },
       {
-        path: "aboutus",
+        path: "/app/aboutus",
         element: <AboutUsMain />,
       },
       {
-        path: "cities",
+        path: "/app/cities",
         element: <Cities />,
       },
       {
+<<<<<<< HEAD
         path: "cart",
         element: <CartPage/>,
       },
 
       {
         path: "delhi",
+=======
+        path: "/app/cities/delhi",
+>>>>>>> refs/remotes/origin/main
         element: <Delhi />,
       },
     ],
@@ -163,9 +172,9 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     {/* <SmoothScrolling> */}
-      <Provider store={hotelStore}>
-        <RouterProvider router={router} />
-      </Provider>
+    <Provider store={hotelStore}>
+      <RouterProvider router={router} />
+    </Provider>
     {/* </SmoothScrolling> */}
   </React.StrictMode>
 );
