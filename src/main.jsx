@@ -47,44 +47,56 @@ const router = createBrowserRouter([
     element: <App />, 
     children: [
       {
-        index: true,  // default route under /app
-        element: <DefaultLayout />,  // Adjust based on what should be the default component
-      },
-      {
-        path: "calendar",  // Subpath under /app
-        element: (
-          <>
-            <PageTitle title="HealGrimage" />
-            <Calendar />
-          </>
-        ),
-      },
-      {
-        path: "profile",
-        element: (
-          <>
-            <PageTitle title="HealGrimage" />
-            <Profile />
-          </>
-        ),
-      },
-      {
-        path: "tables",
-        element: (
-          <>
-            <PageTitle title="HealGrimage" />
-            <Tables />
-          </>
-        ),
-      },
-      {
-        path: "settings",
-        element: (
-          <>
-            <PageTitle title="HealGrimage" />
-            <Settings />
-          </>
-        ),
+        path: "",
+        element: <DefaultLayout />, 
+        children: [
+          {
+            index: true, 
+            path: "",
+            element: (
+              <>
+                <PageTitle title="HealGrimage" />
+                <ECommerce />
+              </>
+            ),
+          },
+          {
+            path: "calendar",  // Subpath under /app
+            element: (
+              <>
+                <PageTitle title="HealGrimage" />
+                <Calendar />
+              </>
+            ),
+          },
+          {
+            path: "profile",
+            element: (
+              <>
+                <PageTitle title="HealGrimage" />
+                <Profile />
+              </>
+            ),
+          },
+          {
+            path: "tables",
+            element: (
+              <>
+                <PageTitle title="HealGrimage" />
+                <Tables />
+              </>
+            ),
+          },
+          {
+            path: "settings",
+            element: (
+              <>
+                <PageTitle title="HealGrimage" />
+                <Settings />
+              </>
+            ),
+          },
+        ]
       },
       {
         path: "ayush",

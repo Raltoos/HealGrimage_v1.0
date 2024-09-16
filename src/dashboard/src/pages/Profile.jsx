@@ -8,7 +8,7 @@ const Profile = () => {
     <>
       <Breadcrumb pageName="Profile" />
 
-      <div className="overflow-hidden rounded-sm border bg-white shadow-default">
+      <div className="h-[62vh] overflow-hidden rounded-sm border bg-white shadow-default overflow-y-scroll">
         <div className="relative z-20 h-35 md:h-65">
           <img
             src={CoverOne}

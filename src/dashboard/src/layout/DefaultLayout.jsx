@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useState } from 'react';
+import {Outlet} from 'react-router-dom'
 import Header from '../components/Header/index';
 import Sidebar from '../components/Sidebar/index';
 import ECommerce from '../pages/Dashboard/ECommerce';
@@ -24,7 +25,7 @@ const DefaultLayout = ({ children }) => {
           {/* <!-- ===== Main Content Start ===== --> */}
           <main>
             <div className="mx-auto max-w-screen-2xl overflow-hidden p-4 md:p-6 2xl:p-10">
-              <ECommerce/>
+              <Outlet />
             </div>
           </main>
           {/* <!-- ===== Main Content End ===== --> */}

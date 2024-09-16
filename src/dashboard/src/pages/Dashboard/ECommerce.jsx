@@ -6,7 +6,7 @@ import TableOne from '../../components/Tables/TableOne.jsx';
 
 const ECommerce = () => {
   return (
-    <>
+    <div className='h-[76vh] w-full overflow-y-scroll'>
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6 xl:grid-cols-2 2xl:gap-7.5">
         <CardDataStats
           title="Medical Tourists"
@@ -72,7 +72,7 @@ const ECommerce = () => {
         </div>
         <ChatCard />
       </div>
-    </>
+    </div>
   );
 };
 
