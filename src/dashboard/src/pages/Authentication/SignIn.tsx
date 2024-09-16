@@ -23,7 +23,7 @@ const SignIn: React.FC = () => {
                 suspendisse.
               </p>
 
-              <span className="mt-15 inline-block">
+              <span className="mt-12 inline-block">
                 <svg
                   width="350"
                   height="350"
