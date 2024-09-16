@@ -52,7 +52,7 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "calendar",
+        path: "/dashboard/calendar",
         element: (
           <>
             <PageTitle title="HealGrimage" />
@@ -123,6 +123,42 @@ const router = createBrowserRouter([
         index: true,
         // element: <DefaultLayout/>
         element: <DefaultLayout/>
+      },
+      {
+        path: "/app/calendar",
+        element: (
+          <>
+            <PageTitle title="HealGrimage" />
+            <Calendar />
+          </>
+        ),
+      },
+      {
+        path: "/app/profile",
+        element: (
+          <>
+            <PageTitle title="HealGrimage" />
+            <Profile />
+          </>
+        ),
+      },
+      {
+        path: "/app/tables",
+        element: (
+          <>
+            <PageTitle title="HealGrimage" />
+            <Tables />
+          </>
+        ),
+      },
+      {
+        path: "/app/settings",
+        element: (
+          <>
+            <PageTitle title="HealGrimage" />
+            <Settings />
+          </>
+        ),
       },
       {
         path: "/app/ayush",

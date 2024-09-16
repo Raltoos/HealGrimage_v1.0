@@ -140,7 +140,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
               {/* <!-- Menu Item Calendar --> */}
               <li>
                 <NavLink
-                  to="/dashboard/calendar"
+                  to="/app/calendar"
                   className={`group relative flex items-center gap-2.5 rounded-sm py-2 px-4 font-medium text-white duration-300 ease-in-out hover:bg-[#7da7f51d] ${
                     pathname.includes('calendar') &&
                     'bg-[#7da7f51d]'
@@ -197,7 +197,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
               {/* <!-- Menu Item Bookings --> */}
               <li>
                 <NavLink
-                  to="/dashboard/tables"
+                  to="/app/tables"
                   className={`group relative flex items-center gap-2.5 rounded-sm py-2 px-4 font-medium text-white duration-300 ease-in-out hover:bg-[#7da7f51d] ${
                     pathname.includes('tables') && 'bg-[#7da7f51d]'
                   }`}
@@ -235,7 +235,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
               {/* <!-- Menu Item Settings --> */}
               <li>
                 <NavLink
-                  to="/dashboard/settings"
+                  to="/app/settings"
                   className={`group relative flex items-center gap-2.5 rounded-sm py-2 px-4 font-medium text-white duration-300 ease-in-out hover:bg-[#7da7f51d] ${
                     pathname.includes('settings') &&
                     'bg-[#7da7f51d]'
