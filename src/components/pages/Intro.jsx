@@ -25,9 +25,9 @@ const Intro = () => {
           <div className="flex w-[30rem]">
             <div className="flex-custom-col lg:items-start justify-center hero-flex-gap sm:justify-center md:items-center">
               <div className="col-row col-row-title medium text-center md:text-left">
-                <h1 className="font-cormo text-black">
+                <h2 className="font-cormo text-black">
                   Revolutionizing Medical Tourism
-                </h1>
+                </h2>
               </div>
               <div
                 ref={contentRef}

@@ -663,7 +663,7 @@
 
     .hero-title {
         max-width: calc(var(--title-size) * 6.5);
-        margin-bottom: var(--gap);
+        
     }
 
     /* intro section */

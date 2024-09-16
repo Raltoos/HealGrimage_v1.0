@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux";
 import { sidebarActions } from "../../store/slices/siderbarSlice";
 import { NavLink } from "react-router-dom";
 import GoogleTranslate from "../translator/GoogleTranslate";
+import DropdownUser from "../../dashboard/src/components/Header/DropdownUser";
 
 const Header = () => {
   const dispatch = useDispatch();
@@ -58,7 +59,7 @@ const Header = () => {
           {/* will be mapped from data */}
           <ul className={`lg:flex logo hidden text-black`}>
             <li className="nav-a">
-              <NavLink to="/main">
+              <NavLink to="/app">
                 <a className="flex-custom-center text-black relative overflow-hidden group font-karla">
                   <span className="text-[1.3rem] nav-span inline-block transition-all duration-300 ease-in-out transform group-hover:-translate-y-full group-hover:opacity-0 text-black">
                     Home
@@ -70,7 +71,7 @@ const Header = () => {
               </NavLink>
             </li>
             <li className="nav-a">
-              <NavLink to="/ayush">
+              <NavLink to="/app/ayush">
                 <a className="flex-custom-center text-black relative overflow-hidden group font-karla">
                   <span className="text-[1.3rem] nav-span inline-block transition-all duration-300 ease-in-out transform group-hover:-translate-y-full group-hover:opacity-0 text-black">
                     AYUSH
@@ -82,7 +83,7 @@ const Header = () => {
               </NavLink>
             </li>
             <li className="nav-a">
-              <NavLink to="/services">
+              <NavLink to="/app/services">
                 <a className="flex-custom-center text-black relative overflow-hidden group font-karla">
                   <span className="text-[1.3rem] nav-span inline-block transition-all duration-300 ease-in-out transform group-hover:-translate-y-full group-hover:opacity-0 text-black">
                     <div className="flex gap-1">Services</div>
@@ -94,7 +95,7 @@ const Header = () => {
               </NavLink>
             </li>
             <li className="nav-a">
-              <NavLink to="/healthcard">
+              <NavLink to="/app/healthcard">
                 <a className="flex-custom-center text-black relative overflow-hidden group font-karla">
                   <span className="text-[1.3rem] nav-span inline-block transition-all duration-300 ease-in-out transform group-hover:-translate-y-full group-hover:opacity-0 text-black">
                     Health Card
@@ -106,7 +107,7 @@ const Header = () => {
               </NavLink>
             </li>
             <li className="nav-a">
-              <NavLink to="/aboutus">
+              <NavLink to="/app/aboutus">
                 <a className="flex-custom-center text-black relative overflow-hidden group font-karla">
                   <span className="text-[1.3rem] nav-span inline-block transition-all duration-300 ease-in-out transform group-hover:-translate-y-full group-hover:opacity-0 text-black">
                     About Us
@@ -118,7 +119,7 @@ const Header = () => {
               </NavLink>
             </li>
             <li className="nav-a">
-              <NavLink to="/cities">
+              <NavLink to="/app/cities">
                 <a className="flex-custom-center text-black relative overflow-hidden group font-karla">
                   <span className="text-[1.3rem] nav-span inline-block transition-all duration-300 ease-in-out transform group-hover:-translate-y-full group-hover:opacity-0 text-black">
                     Cities
@@ -145,15 +146,12 @@ const Header = () => {
         </nav>
         
         <div>
-          <div
-            className={`btn h-[2em] hover:shadow-2xl hover:scale-105 hover:bg-opacity-90 transition-all duration-300 ease-in-out lg:h-[var(--btn-height-small)] rounded-none bg-[#052560] `}
-          >
-            <div className="btn-content flex gap-2">
-              <NavLink to="/login">
-                <span className="flex text-white">Log In</span>
-              </NavLink>
-            </div>
-          </div>
+        <div className="flex items-center gap-3 2xsm:gap-7">
+
+{/* <!-- User Area --> */}
+<DropdownUser />
+{/* <!-- User Area --> */}
+</div>
         </div>
       </div>
       <div
