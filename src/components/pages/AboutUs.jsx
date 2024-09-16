@@ -23,7 +23,7 @@ const AboutUs = () => {
   }, []);
 
   return (
-    <>
+    <div id="S">
       <section id="about-us" className="mt-[var(--section-padding)] relative bg-[#052560]">
         <div className="w-full bg-custom bg-[#052560] flex justify-center">
           <div className="flex flex-col md:flex-row relative w-[75%] items-center gap-[6rem] h-full text-white pb-8">
@@ -83,7 +83,7 @@ const AboutUs = () => {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 };
 
