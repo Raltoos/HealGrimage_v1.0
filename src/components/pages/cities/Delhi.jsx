@@ -50,17 +50,56 @@ const Delhi = () => {
   ];
 
   return (
-    <section className="pt-[var(--section-padding)]">
+    <section className="pt-[var(--section-padding)] overflow-hidden">
       {/* First heading and subheading */}
       <div className="industry-container">
-        <div className="flex justify-center w-full">
+        <div className="w-screen flex flex-col items-center justify-center">
           <div className="flex flex-col text-center w-full flex-custom-center">
-            <h2 className="text-4xl font-bold text-black mb-4">Delhi</h2>
-            <p className="text-2xl text-black mb-6 w-[80%]">
+            <h2 className="text-5xl text-black mb-4 font-rale">Delhi</h2>
+            <p className="text-2xl text-black mb-6 font-rale w-[80%]">
               Delhi is a top destination for medical tourism with world-class
-              hospitals. It offers cutting-edge treatments, and visitors can
-              also explore the city's vibrant tech culture and historical
-              landmarks.
+              hospitals offering cutting-edge treatments. Visitors can also
+              explore the city's vibrant culture and historical landmarks.
+            </p>
+          </div>
+
+          {/* Cultural Insights */}
+          <div className="w-[80%] my-5 text-center">
+            <h2 className="text-5xl font-rale">From the Local Guides</h2>
+            <p className="font-rale mt-3 text-lg">
+              Delhi’s culture is a vibrant mix of tradition, diversity, and
+              lively street life that you’ll experience in every corner. As a
+              local guide would tell you, the heart of the city beats through
+              its bustling markets like{" "}
+              <span className="font-bold">Sarojini Nagar</span> and{" "}
+              <span className="font-bold">Chandni Chowk</span>, where you can
+              find everything from traditional garments to handcrafted jewelry,
+              while the aroma of street food like chaat, parathas, and kebabs
+              fills the air.
+              <br />
+              <br />
+              Delhi’s food culture is a reflection of its people, with
+              influences from all over India – so don’t miss out on local
+              favorites like <span className="font-bold">
+                butter chicken
+              </span>{" "}
+              or a refreshing plate of golgappas.
+              <br />
+              <br />
+              The city's culture is also deeply rooted in its religious
+              diversity, with historic temples, mosques, and churches standing
+              as symbols of harmony. Whether it’s the peaceful calm of{" "}
+              <span className="font-bold">Bangla Sahib Gurudwara</span> or the
+              grandeur of the <span className="font-bold">Lotus Temple</span>,
+              you’ll see the spiritual side of the city coexisting with its
+              fast-paced urban life.
+              <br />
+              <br />
+              Festivals in Delhi are a true spectacle – whether it’s the vibrant
+              colors of Holi or the grand lights of Diwali, locals take pride in
+              their festive spirit. A walk through the city will show you how
+              ancient traditions blend effortlessly with modern culture, making
+              Delhi an unforgettable cultural experience.
             </p>
           </div>
         </div>
@@ -127,11 +166,11 @@ const Delhi = () => {
               </div>
             ))}
           </div>
-          <div className="w-[80%] h-fit flex flex-col items-center justify-center gap-10 bg-[#052560] rounded-2xl mt-5">
-            <h4 className="text-white mt-[2rem]">
+          <div className="w-screen h-fit flex flex-col items-center justify-center gap-10 rounded-2xl mt-5 bg-[#F1F5F9]">
+            <h4 className="text-black font-rale mt-[2rem]">
               Explore our latest VR exploration feature
             </h4>
-            <div className="w-[90%]">
+            <div className="w-[70%]">
               <VideoPlayerPage />
             </div>
           </div>
