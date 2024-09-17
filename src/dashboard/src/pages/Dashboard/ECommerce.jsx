@@ -33,8 +33,8 @@ const ECommerce = () => {
           </svg>
         </CardDataStats>
         <CardDataStats
-          title="Indian Medical Tourism Industry"
-          total="$8.77 billion expected"
+          title="Wellness Tourist"
+          total="$3 billion expected"
           rate="17.2%"
           levelUp
         >

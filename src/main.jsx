@@ -123,8 +123,8 @@ const router = createBrowserRouter([
         element: <Cities />,
       },
       {
-        path: "cart",
-        element: <CartPage />,
+        path: "/app/cart",
+        element: <CartPage/>,
       },
       {
         path: "delhi",

@@ -50,7 +50,7 @@ export default function LoginForm() {
 
   useEffect(() => {
     if (loginStatus === "succeeded") {
-      navigate("/main");
+      navigate("/app");
     }
   }, [loginStatus, navigate]);
 
