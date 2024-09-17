@@ -849,7 +849,37 @@
         justify-content: center;
         align-items: center;
     }
-    
+     /* flip-animation */
+     /* src/components/FlipCard.css */
+
+/* src/components/FlipCard.css */
+
+.flip-card {
+    perspective: 1000px;
+  }
+  
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+  }
+  
+  .flip-card-inner.flipped {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front,
+  .flip-card-back {
+    backface-visibility: hidden;
+    position: absolute;
+    width: 100%;
+  }
+  
+  .flip-card-back {
+    transform: rotateY(180deg);
+  }
+  
       
 }
 
