@@ -1,5 +1,6 @@
 import jsVectorMap from 'jsvectormap';
 // import "jsvectormap/dist/css/jsvectormap.css"
+import './jsvectormap.css'
 import { useEffect } from 'react';
 import '../../js/india_en';
 
