@@ -7,43 +7,43 @@ import BrandFive from '../../images/brand/brand-05.svg';
 const brandData = [
   {
     logo: BrandOne,
-    name: 'Google',
-    visitors: 3.5,
+    name: 'Taj Mahal',
+    visitors: '35',
     revenues: '5,768',
-    sales: 590,
-    conversion: 4.8,
+    // sales: 590,
+    // conversion: 4.8,
   },
   {
     logo: BrandTwo,
-    name: 'Twitter',
-    visitors: 2.2,
+    name: 'Qutub Minar',
+    visitors: 10,
     revenues: '4,635',
-    sales: 467,
-    conversion: 4.3,
+    // sales: 467,
+    // conversion: 4.3,
   },
   {
     logo: BrandThree,
-    name: 'Github',
-    visitors: 2.1,
+    name: 'Jaipu`s Amer Fort',
+    visitors: 8,
     revenues: '4,290',
-    sales: 420,
-    conversion: 3.7,
+    // sales: 420,
+    // conversion: 3.7,
   },
   {
     logo: BrandFour,
-    name: 'Vimeo',
-    visitors: 1.5,
+    name: 'Gateway of India',
+    visitors: 15,
     revenues: '3,580',
-    sales: 389,
-    conversion: 2.5,
+    // sales: 389,
+    // conversion: 2.5,
   },
   {
     logo: BrandFive,
-    name: 'Facebook',
-    visitors: 3.5,
+    name: 'Golden Temple',
+    visitors: 50,
     revenues: '6,768',
-    sales: 390,
-    conversion: 4.2,
+    // sales: 390,
+    // conversion: 4.2,
   },
 ];
 
@@ -51,7 +51,7 @@ const TableOne = () => {
   return (
     <div className="rounded-sm border border-stroke bg-white px-5 pt-6 pb-2.5 shadow-default dark:border-strokedark dark:bg-boxdark sm:px-7.5 xl:pb-1">
       <h4 className="mb-6 text-xl font-rale text-black">
-        Top Channels
+        Top Tourist spots in India 
       </h4>
 
       <div className="flex flex-col">
@@ -71,7 +71,7 @@ const TableOne = () => {
               Revenues
             </h5>
           </div>
-          <div className="hidden 3 text-center sm:block xl:p-5">
+          {/* <div className="hidden 3 text-center sm:block xl:p-5">
             <h5 className="text-sm font-medium uppercase xsm:text-base">
               Sales
             </h5>
@@ -80,7 +80,7 @@ const TableOne = () => {
             <h5 className="text-sm font-medium uppercase xsm:text-base">
               Conversion
             </h5>
-          </div>
+          </div> */}
         </div>
 
         {brandData.map((brand, key) => (
@@ -93,9 +93,9 @@ const TableOne = () => {
             key={key}
           >
             <div className="flex items-center gap-3 p-2.5 xl:p-5">
-              <div className="flex-shrink-0">
+              {/* <div className="flex-shrink-0">
                 <img src={brand.logo} alt="Brand" />
-              </div>
+              </div> */}
               <p className="hidden text-black sm:block">
                 {brand.name}
               </p>
@@ -109,13 +109,13 @@ const TableOne = () => {
               <p className="text-meta-3">${brand.revenues}</p>
             </div>
 
-            <div className="hidden items-center justify-center p-3 sm:flex xl:p-5">
+            {/* <div className="hidden items-center justify-center p-3 sm:flex xl:p-5">
               <p className="text-black">{brand.sales}</p>
             </div>
 
             <div className="hidden items-center justify-center p-3 sm:flex xl:p-5">
               <p className="text-meta-5">{brand.conversion}%</p>
-            </div>
+            </div> */}
           </div>
         ))}
       </div>
