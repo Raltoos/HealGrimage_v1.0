@@ -34,7 +34,7 @@ const ECommerce = () => {
         </CardDataStats>
         <CardDataStats
           title="Wellness Tourist"
-          total="$3 billion expected"
+          total="3B tourist expected"
           rate="17.2%"
           levelUp
         >
@@ -61,8 +61,8 @@ const ECommerce = () => {
           </svg>
         </CardDataStats>
         <CardDataStats
-          title="Medical Tourists"
-          total="7.3M tourists expected"
+          title="Cultural Tourist"
+          total="10M tourists expected"
           rate="19.67%"
           levelUp
         >
@@ -85,8 +85,8 @@ const ECommerce = () => {
           </svg>
         </CardDataStats>
         <CardDataStats
-          title="Wellness Tourist"
-          total="$3 billion expected"
+          title="Holistic Care Tourist"
+          total="1.2M tourist expected"
           rate="17.2%"
           levelUp
         >
