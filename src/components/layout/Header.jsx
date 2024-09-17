@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux";
 import { sidebarActions } from "../../store/slices/siderbarSlice";
 import { NavLink } from "react-router-dom";
 import GoogleTranslate from "../translator/GoogleTranslate";
+import photo from "./logowithoutbg.png"
 import DropdownUser from "../../dashboard/src/components/Header/DropdownUser";
 
 const Header = () => {
@@ -41,7 +42,7 @@ const Header = () => {
         <div className="hidden md:flex">
           <picture>
             <img
-              src="./logowithoutbg.png"
+              src={photo}
               alt=""
               className={`hero-logo flex-custom-center w-[5rem] h-[3.5rem]`}
             />
@@ -62,10 +63,10 @@ const Header = () => {
               <NavLink to="/app">
                 <a className="flex-custom-center text-black relative overflow-hidden group font-karla">
                   <span className="text-[1.3rem] nav-span inline-block transition-all duration-300 ease-in-out transform group-hover:-translate-y-full group-hover:opacity-0 text-black">
-                    Home
+                    Dashboard
                   </span>
                   <span className="text-[1.3rem] nav-span absolute top-full left-0 w-full transition-all duration-300 ease-in-out transform group-hover:-translate-y-full text-black">
-                    Home
+                    Dashboard
                   </span>
                 </a>
               </NavLink>

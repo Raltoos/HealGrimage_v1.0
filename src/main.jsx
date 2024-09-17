@@ -7,7 +7,6 @@ import { Provider } from "react-redux";
 import Main from "./components/layout/Main.jsx";
 import Services from "./components/pages/servicesPage/Services.jsx";
 import hotelStore from "./store/store.js";
-// import SmoothScrolling from "./components/scroll/SmoothScrolling.jsx";
 import AYUSH from "./components/pages/ayushPage/AYUSH.jsx";
 import Register from "./components/UserAuth/Register/RegisterPage.jsx";
 import Login from "./components/UserAuth/Login/LoginPage.jsx";
@@ -32,6 +31,10 @@ import DefaultLayout from "./dashboard/src/layout/DefaultLayout.jsx";
 
 const router = createBrowserRouter([
   {
+    path: "/",
+    element: <Landing />,
+  },
+  {
     path: "/login",
     element: <Login />,
   },
@@ -40,93 +43,63 @@ const router = createBrowserRouter([
     element: <Register />,
   },
   {
-    path: "/dashboard",
-    element: <DashboardLayout />,
-    children: [
-      {
-        index: true,
-        element: (
-          <React.Fragment>
-            <PageTitle title="HealGrimage" />
-            <ECommerce />
-          </React.Fragment>
-        ),
-      },
-      {
-        path: "calendar",
-        element: (
-          <>
-            <PageTitle title="HealGrimage" />
-            <Calendar />
-          </>
-        ),
-      },
-      {
-        path: "profile",
-        element: (
-          <>
-            <PageTitle title="HealGrimage" />
-            <Profile />
-          </>
-        ),
-      },
-      {
-        path: "tables",
-        element: (
-          <>
-            <PageTitle title="HealGrimage" />
-            <Tables />
-          </>
-        ),
-      },
-      {
-        path: "settings",
-        element: (
-          <>
-            <PageTitle title="HealGrimage" />
-            <Settings />
-          </>
-        ),
-      },
-      {
-        path: "auth/signin",
-        element: (
-          <>
-            <PageTitle title="HealGrimage" />
-            <SignIn />
-          </>
-        ),
-      },
-      {
-        path: "auth/signup",
-        element: (
-          <>
-            <PageTitle title="HealGrimage" />
-            <SignUp />
-          </>
-        ),
-      }
-    ],
-  },
-  {
-    path: "/verify/email/otp",
-    element: <EmailOTPVerify />,
-  },
-  {
-    path: "/",
-    element: <Landing />,
-  },
-  {
     path: "/app",
-    element: <App />,
+    element: <App />, 
     children: [
       {
-        index: true,
-        // element: <DefaultLayout/>
-        element: <DefaultLayout/>
+        path: "",
+        element: <DefaultLayout />, 
+        children: [
+          {
+            index: true, 
+            path: "",
+            element: (
+              <>
+                <PageTitle title="HealGrimage" />
+                <ECommerce />
+              </>
+            ),
+          },
+          {
+            path: "calendar",  // Subpath under /app
+            element: (
+              <>
+                <PageTitle title="HealGrimage" />
+                <Calendar />
+              </>
+            ),
+          },
+          {
+            path: "profile",
+            element: (
+              <>
+                <PageTitle title="HealGrimage" />
+                <Profile />
+              </>
+            ),
+          },
+          {
+            path: "tables",
+            element: (
+              <>
+                <PageTitle title="HealGrimage" />
+                <Tables />
+              </>
+            ),
+          },
+          {
+            path: "settings",
+            element: (
+              <>
+                <PageTitle title="HealGrimage" />
+                <Settings />
+              </>
+            ),
+          },
+        ]
       },
       {
-        path: "/app/ayush",
+        path: "ayush",
         element: <AYUSH />,
       },
       {
@@ -134,26 +107,25 @@ const router = createBrowserRouter([
         element: <AyushServices />,
       },
       {
-        path: "/app/healthcard",
+        path: "healthcard",
         element: <HealthMain />,
       },
       {
-        path: "/app/services",
+        path: "services",
         element: <Services />,
       },
       {
-        path: "/app/aboutus",
+        path: "aboutus",
         element: <AboutUsMain />,
       },
       {
-        path: "/app/cities",
+        path: "cities",
         element: <Cities />,
       },
       {
         path: "/app/cart",
         element: <CartPage/>,
       },
-
       {
         path: "delhi",
         element: <Delhi />,
@@ -164,10 +136,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    {/* <SmoothScrolling> */}
     <Provider store={hotelStore}>
       <RouterProvider router={router} />
     </Provider>
-    {/* </SmoothScrolling> */}
   </React.StrictMode>
 );

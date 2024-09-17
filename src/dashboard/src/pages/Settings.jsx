@@ -4,7 +4,7 @@ import userThree from '../images/user/user-03.png';
 const Settings = () => {
   return (
     <>
-      <div className="mx-auto max-w-270">
+      <div className="h-[76vh] w-full overflow-y-scroll mx-auto max-w-270 pr-5">
         <Breadcrumb pageName="Settings" />
 
         <div className="grid grid-cols-5 gap-8">
