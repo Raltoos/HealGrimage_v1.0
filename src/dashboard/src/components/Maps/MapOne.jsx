@@ -1,9 +1,5 @@
 import jsVectorMap from 'jsvectormap';
-<<<<<<< HEAD
 // import "jsvectormap/dist/css/jsvectormap.css"
-=======
-import './jsvectormap.css'
->>>>>>> refs/remotes/origin/main
 import { useEffect } from 'react';
 import '../../js/india_en';
 
@@ -54,3 +50,4 @@ const MapOne = () => {
 };
 
 export default MapOne;
+

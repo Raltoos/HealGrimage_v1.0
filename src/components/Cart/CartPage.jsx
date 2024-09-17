@@ -47,7 +47,7 @@ const CartPage = () => {
                 <p>City: {hospital.city}</p>
                 <p>Treatment: {hospital.treatment}</p>
                 <p>Budget: {hospital.budget}</p>
-                
+
                 <div className="flex gap-2 mt-2">
                   <button
                     onClick={() => handleRemoveFromCart(hospital._id)}
