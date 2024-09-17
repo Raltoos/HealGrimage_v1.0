@@ -5,7 +5,7 @@ const Settings = () => {
   return (
     <>
       <div className="h-[76vh] w-full overflow-y-scroll mx-auto max-w-270 pr-5">
-        <Breadcrumb pageName="Settings" />
+        <Breadcrumb pageName="Health card" />
 
         <div className="grid grid-cols-5 gap-8">
           <div className="col-span-5 xl:col-span-3">

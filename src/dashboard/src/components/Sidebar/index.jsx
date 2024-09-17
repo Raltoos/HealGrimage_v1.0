@@ -54,7 +54,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
   return (
     <aside
       ref={sidebar}
-      className={`absolute left-0 top-0 z-50 flex h-screen w-72.5 flex-col overflow-y-hidden bg-[#052560] duration-300 ease-linear lg:static lg:translate-x-0 ${
+      className={`absolute h-screen left-0 top-0 z-50 flex w-72.5 flex-col  bg-[#052560] duration-300 ease-linear lg:static lg:translate-x-0 overflow-hidden ${
         sidebarOpen ? 'translate-x-0' : '-translate-x-full'
       }`}
     >
@@ -270,11 +270,13 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
                       </clipPath>
                     </defs>
                   </svg>
-                  Settings
+                  Health card
                 </NavLink>
               </li>
               {/* <!-- Menu Item Settings --> */}
             </ul>
+
+            
           </div>
         </nav>
         {/* <!-- Sidebar Menu --> */}

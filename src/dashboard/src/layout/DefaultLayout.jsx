@@ -7,13 +7,19 @@ import ECommerce from '../pages/Dashboard/ECommerce';
 
 const DefaultLayout = ({ children }) => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
+ 
+  const [isMedicalTourism, setIsMedicalTourism] = useState(true); // State to track the dashboard type
 
+  // Function to toggle the dashboard type
+  const toggleDashboard = () => {
+    setIsMedicalTourism((prev) => !prev);
+  };
   return (
     <div className="w-full h-full bg-[#F1F5F9] text-black ">
       {/* <!-- ===== Page Wrapper Start ===== --> */}
       <div className="flex h-full">
         {/* <!-- ===== Sidebar Start ===== --> */}
-        <Sidebar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
+        <Sidebar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} toggleDashboard={toggleDashboard} />
         {/* <!-- ===== Sidebar End ===== --> */}
 
         {/* <!-- ===== Content Area Start ===== --> */}
