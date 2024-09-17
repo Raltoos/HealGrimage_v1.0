@@ -270,7 +270,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
                       </clipPath>
                     </defs>
                   </svg>
-                  Settings
+                  Health card
                 </NavLink>
               </li>
               {/* <!-- Menu Item Settings --> */}
